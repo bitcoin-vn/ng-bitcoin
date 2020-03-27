@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from "ngx-bootstrap";
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit, AfterViewInit {
 
-  constructor() {
+  modalRef: BsModalRef;
+  constructor(private modalService: BsModalService) { }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
   }
 
   ngOnInit() {

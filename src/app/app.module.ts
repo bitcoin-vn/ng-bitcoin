@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// Project
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './components/_root';
 import { FullLayoutComponent } from './components/_root/full-layout/full-layout.component';
@@ -18,6 +18,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MusicComponent } from './components/_common/music/music.component';
 import { NavigationComponent } from './components/_common/navigation/navigation.component';
 import { FooterComponent } from './components/_common/footer/footer.component';
+// ngx-bootstrap v4
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { FooterComponent } from './components/_common/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutes 
+    AppRoutes,
+    ModalModule.forRoot() 
   ],
   providers: [],
   bootstrap: [AppComponent]

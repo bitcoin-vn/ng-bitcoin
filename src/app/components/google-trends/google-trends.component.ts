@@ -19,28 +19,5 @@ export class GoogleTrendsComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    const google = {
-      id: 'widget-googleTrend',
-      text: `trends.embed.renderExploreWidget("TIMESERIES", {
-        "comparisonItem": [{
-          "keyword": "Bitcoin",
-          "geo": "",
-          "time": "today 12-m"
-        }],
-        "category": 0,
-        "property": ""
-      }, {
-        "exploreQuery": "q=Bitcoin&date=today 12-m",
-        "guestPath": "https://trends.google.com.vn:443/trends/embed/"
-      });`
-    }
-    this.renderScript(google);
-  }
-  // 3. call them in ngOnInit
-  private renderScript(obj): void {
-    const s = this.renderer2.createElement('script');
-    s.type = 'text/javascript';
-    s.text = obj.text;
-    this.renderer2.appendChild(this.document.getElementById(obj.id), s);
   }
 }
