@@ -20,6 +20,8 @@ import { NavigationComponent } from './components/_common/navigation/navigation.
 import { FooterComponent } from './components/_common/footer/footer.component';
 // ngx-bootstrap v4
 import { ModalModule } from 'ngx-bootstrap/modal';
+// angularx-qrcode
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
   imports: [
     BrowserModule,
     AppRoutes,
+    QRCodeModule,
     ModalModule.forRoot() 
   ],
   providers: [],

@@ -17,7 +17,7 @@
       <li><a class="button" routerLink="/charts" routerLinkActive="maket-active">Charts</a></li>
       <li><a class="button" routerLink="/analysis" routerLinkActive="maket-active">Analysis</a></li>
       <li><a class="button" routerLink="/chat-room" routerLinkActive="maket-active">Chat Room</a></li>
-      <li><a class="button" routerLink="/cryptocurrency" routerLinkActive="maket-active">Cryptocurrency</a></li>
+      <li><a class="button" routerLink="/cryptocurrency" routerLinkActive="maket-active">Crypto Currency</a></li>
       <li><a class="button" routerLink="/notes" routerLinkActive="maket-active">My Notes ✰</a></li>
       <li><a class="button" routerLink="/btc-to-usd" routerLinkActive="maket-active">Convert BTC to USD</a></li>
       <li><a class="button" routerLink="/usd-to-btc" routerLinkActive="maket-active">Convert USD to BTC</a></li>
@@ -25,7 +25,7 @@
       <li><a class="button" routerLink="/btc-qr-code" routerLinkActive="maket-active">Bitcoin QR Code</a></li>
       <li><a class="button" routerLink="/btc-cards" routerLinkActive="maket-active">Bitcoin Paper Wallet</a></li>
       <li><a class="button" routerLink="/age-distribution" routerLinkActive="maket-active">Bitcoin Age Distribution</a></li>
-      <li><a class="button" href="https://trends.google.com.vn/trends/explore?q=Bitcoin"  target="blank" routerLinkActive="maket-active">Google Trends</a></li>
+      <li><a class="button" href="https://trends.google.com.vn/trends/explore?q=Bitcoin" target="blank" routerLinkActive="maket-active">Google Trends</a></li>
       <li><a class="button" target="blank" href="https://coin360.com/exchanges" routerLinkActive="maket-active">Exchanges</a></li>
       <li><a class="button" target="blank" href="https://bitcoinfees.earn.com/" routerLinkActive="maket-active">Bitcoin Frees</a></li>
       <li><a class="button" target="blank" href="https://alternative.me/crypto/fear-and-greed-index" routerLinkActive="maket-active">Fear And Greed</a></li>
@@ -37,11 +37,39 @@
     </audio>
   </div>
   <div class="alert alert-warning mb-0 fixFacebookAdd text-center">
-    <a href="javascript:void(0)" data-toggle="modal" data-target="#qrCodeUrl">
+    <a href="javascript:void(0)" (click)="openModal(template1)">
       <span class="alert-warning">QR Code URL</span>
     </a> |
-    <a href="" data-toggle="modal" data-target="#donate">
+    <a href="javascript:void(0)" (click)="openModal(template2)">
       <span class="alert-warning">Donate</span>
     </a>
   </div>
+  <!-- Modal -->
+  <ng-template #template1>
+    <div class="modal-header">
+      <h4 class="modal-title text-info m-auto">Scan qr code to access website</h4>
+    </div>
+    <div class="modal-body text-center">
+      <pre class="m-0"><a target="_blank" class="text-dark" href="https://www.blockchain.com/btc/address/{{qrdata}}">{{qrdata}}</a></pre>
+      <qrcode [qrdata]="qrdata" [width]="250" [level]="'M'"></qrcode>
+    </div>
+    <div class="modal-footer m-auto">
+      <button type="button" class="btn btn-secondary" (click)="modalRef.hide()">Close</button>
+    </div>
+  </ng-template>
+
+  <!-- Modal -->
+  <ng-template #template2>
+    <div class="modal-header">
+      <h4 class="modal-title text-info m-auto">Donate to project</h4>
+    </div>
+    <div class="modal-body text-center">
+      <pre class="m-0 text-dark h6">Please Donate To Bitcoin Address</pre>
+      <pre class="m-0"><a target="_blank" class="text-dark" href="https://www.blockchain.com/btc/address/{{btcAddress}}">{{btcAddress}}</a></pre>
+      <img src="assets/images/qr-code-donate.png" width="200" />
+    </div>
+    <div class="modal-footer m-auto">
+      <button type="button" class="btn btn-secondary" (click)="modalRef.hide()">Close</button>
+    </div>
+  </ng-template>
 </nav>

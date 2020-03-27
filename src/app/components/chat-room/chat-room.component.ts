@@ -1,8 +1,9 @@
 // 1. import dependencies
 import { Renderer2, Inject, Component, OnInit, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
-import { configWidgetPrice, configWidgetChatRoom } from "../../components/config-chart/data-display";
+import { configWidgetPrice, configWidgetChatRoom, localeFormats } from "../../components/config-chart/data-display";
 declare const TradingView: any;
+declare const Intl: any;
 
 @Component({
   selector: 'app-chat-room',
@@ -10,12 +11,13 @@ declare const TradingView: any;
   styleUrls: ['./chat-room.component.scss']
 })
 export class ChatRoomComponent implements OnInit {
-
   // 2. pass then in constructor
   constructor(
     private renderer2: Renderer2,
     @Inject(DOCUMENT) private document
-  ) { }
+  ) {
+    this.convertLocale();
+  }
 
   ngOnInit() {
   }
@@ -38,6 +40,10 @@ export class ChatRoomComponent implements OnInit {
     s.src = obj.link;
     s.text = obj.text;
     this.renderer2.appendChild(this.document.getElementById(obj.id), s);
+  }
+
+  private convertLocale() {
+    configWidgetChatRoom.locale = localeFormats.filter(e => e.split('_')[0] === new Intl.NumberFormat().resolvedOptions().locale)[0];
   }
 
 }
