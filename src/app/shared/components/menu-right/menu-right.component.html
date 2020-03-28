@@ -6,12 +6,12 @@
   <div *ngIf="selected">
     <p-dropdown [options]="locales" [(ngModel)]="selected" filter="true" [style]="{'width':'100%'}" (onChange)="onChange($event)">
       <ng-template let-item pTemplate="selectedItem">
-        <img src="https://www.countryflags.io/{{item.icon}}/shiny/32.png" style="width:24px;vertical-align:middle" />
+        <img src="https://www.countryflags.io/{{item?.value?.split('_')[1]}}/shiny/32.png" style="width:24px;vertical-align:middle" />
         <span style="vertical-align:middle; margin-left: .5em; text-transform:capitalize;">{{item.label}}</span>
       </ng-template>
       <ng-template let-row pTemplate="item">
         <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
-          <img src="https://www.countryflags.io/{{row.icon}}/shiny/32.png" style="width:24px;position:absolute;top:1px;left:5px" />
+          <img src="https://www.countryflags.io/{{row?.value?.split('_')[1]}}/shiny/32.png" style="width:24px;position:absolute;top:1px;left:5px" />
           <span style="font-size:14px;float:right;margin-top:4px; text-transform:capitalize;">{{row.label}}</span>
         </div>
       </ng-template>

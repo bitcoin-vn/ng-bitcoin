@@ -1,8 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { localesData } from "../../../components/config-chart/data-display";
+import { FullLocales } from "../../../components/config-chart/data-display";
 interface Locale {
-  icon: string,
   label: string,
   value: string
 }
@@ -27,7 +26,7 @@ export class MenuRightComponent implements OnInit {
   public showHide = false;
   public piSpinner = 'default';
 
-  locales: any[] = localesData;
+  locales: any[] = FullLocales;
   selected: string;
 
   public onShowHide() {
@@ -36,19 +35,23 @@ export class MenuRightComponent implements OnInit {
   }
 
   public onChange(e) {
-    const locale: Locale = localesData.filter((f: Locale) => f.value === e.value)[0];
-    const localeStr = `${locale.value}_${locale.icon.toUpperCase()}`;
-    localStorage.setItem('locale', localeStr);
-    this.onChangeLocale.emit(localeStr);
+    const locale: Locale = FullLocales.filter((f: Locale) => f.value === e.value)[0];
+    localStorage.setItem('locale', locale.value);
+    this.onChangeLocale.emit(locale.value);
   }
 
   constructor() {
   }
 
   ngOnInit() {
-    const locale: Locale = localesData.filter((f: Locale) => f.value === new Intl.NumberFormat().resolvedOptions().locale)[0];
-    this.selected = locale.value
-    localStorage.setItem('locale', `${locale.value}_${locale.icon.toUpperCase()}`);
+    const localeActive = localStorage.getItem('locale');
+    if (localeActive === undefined || localeActive === null) {
+      const locale: Locale = FullLocales.filter((f: Locale) => f.value.split("_")[0] === new Intl.NumberFormat().resolvedOptions().locale)[0];
+      this.selected = locale.value
+      localStorage.setItem('locale', locale.value);
+    } else {
+      this.selected = localeActive;
+    }
   }
 
 }

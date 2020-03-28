@@ -1,7 +1,7 @@
 // 1. import dependencies
 import { Renderer2, Inject, Component, OnInit, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
-import { configWidgetPrice, configWidgetChatRoom, localeFormats } from "../../components/config-chart/data-display";
+import { configWidgetPrice, configWidgetChatRoom } from "../../components/config-chart/data-display";
 declare const TradingView: any;
 declare const Intl: any;
 
@@ -11,24 +11,30 @@ declare const Intl: any;
   styleUrls: ['./chat-room.component.scss']
 })
 export class ChatRoomComponent implements OnInit {
+
+  public onChangeLocale(e): void {
+    this.ngAfterViewInit();
+  }
+
   // 2. pass then in constructor
   constructor(
     private renderer2: Renderer2,
     @Inject(DOCUMENT) private document
-  ) {  }
+  ) { }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
-    const CONFIG1 = JSON.stringify(configWidgetPrice);
+    this.setupLocale();
+    const el = document.getElementById("widget-cryptoprices").innerHTML = '';
+    const CONFIG = JSON.stringify(configWidgetPrice);
     const prices = {
       id: 'widget-cryptoprices',
       link: 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js',
-      text: CONFIG1
+      text: CONFIG
     }
     this.renderScript(prices);
-    configWidgetChatRoom.locale = localStorage.getItem('locale');
     new TradingView.ChatWidgetEmbed(configWidgetChatRoom);
   }
 
@@ -39,6 +45,12 @@ export class ChatRoomComponent implements OnInit {
     s.src = obj.link;
     s.text = obj.text;
     this.renderer2.appendChild(this.document.getElementById(obj.id), s);
+  }
+
+  private setupLocale(e: string = null): void {
+    const l = localStorage.getItem('locale');
+    configWidgetChatRoom.locale = e ? e : l;
+    configWidgetPrice.locale = e ? e : l;
   }
 
 }
