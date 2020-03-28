@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Project
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './components/_root';
@@ -18,6 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MusicComponent } from './components/_common/music/music.component';
 import { NavigationComponent } from './components/_common/navigation/navigation.component';
 import { FooterComponent } from './components/_common/footer/footer.component';
+import { SharedModule } from './shared/shared.module';
 // ngx-bootstrap v4
 import { ModalModule } from 'ngx-bootstrap/modal';
 // angularx-qrcode
@@ -44,9 +46,11 @@ import { QRCodeModule } from 'angularx-qrcode';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutes,
     QRCodeModule,
-    ModalModule.forRoot() 
+    SharedModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

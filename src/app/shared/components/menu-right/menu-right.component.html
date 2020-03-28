@@ -1,0 +1,6 @@
+<div class="menu-right" [class.show-hide]="showHide">
+  <div class="btn-show-hide" (click)="onShowHide()">
+    <i class="pi pi-cog" [@rotatedState]='piSpinner' style="font-size: 30pt"></i>
+  </div>
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,21 @@
+:host {
+  .menu-right {
+    position: fixed;
+    top: 75px;
+    right: -1px;
+    background: #26262b;
+    border-left: 1px solid #5a5a5a;
+    height: 100vh;
+    width: 0px;
+  }
+  .show-hide {
+    width: 200px !important;
+  }
+  .btn-show-hide {
+    position: absolute;
+    left: -39px;
+    background: #0373CB;
+    top: 42%;
+    color: #FFF;
+  }
+}
