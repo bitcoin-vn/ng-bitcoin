@@ -1,5 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { localesData } from "../../../components/config-chart/data-display";
+interface Locale {
+  icon: string,
+  label: string,
+  value: string
+}
+declare const Intl: any;
 
 @Component({
   selector: 'app-menu-right',
@@ -16,18 +23,32 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class MenuRightComponent implements OnInit {
-
+  @Output() public onChangeLocale = new EventEmitter();
   public showHide = false;
   public piSpinner = 'default';
+
+  locales: any[] = localesData;
+  selected: string;
 
   public onShowHide() {
     this.showHide = !this.showHide
     this.piSpinner = (this.piSpinner === 'default' ? 'rotated' : 'default');
   }
 
-  constructor() { }
+  public onChange(e) {
+    const locale: Locale = localesData.filter((f: Locale) => f.value === e.value)[0];
+    const localeStr = `${locale.value}_${locale.icon.toUpperCase()}`;
+    localStorage.setItem('locale', localeStr);
+    this.onChangeLocale.emit(localeStr);
+  }
+
+  constructor() {
+  }
 
   ngOnInit() {
+    const locale: Locale = localesData.filter((f: Locale) => f.value === new Intl.NumberFormat().resolvedOptions().locale)[0];
+    this.selected = locale.value
+    localStorage.setItem('locale', `${locale.value}_${locale.icon.toUpperCase()}`);
   }
 
 }

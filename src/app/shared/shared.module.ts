@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from "@angular/forms";
 import { MenuRightComponent } from './components/menu-right/menu-right.component';
+// primeng
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [MenuRightComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    DropdownModule
   ],
   exports: [
     MenuRightComponent

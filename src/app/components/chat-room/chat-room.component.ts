@@ -15,9 +15,7 @@ export class ChatRoomComponent implements OnInit {
   constructor(
     private renderer2: Renderer2,
     @Inject(DOCUMENT) private document
-  ) {
-    this.convertLocale();
-  }
+  ) {  }
 
   ngOnInit() {
   }
@@ -30,6 +28,7 @@ export class ChatRoomComponent implements OnInit {
       text: CONFIG1
     }
     this.renderScript(prices);
+    configWidgetChatRoom.locale = localStorage.getItem('locale');
     new TradingView.ChatWidgetEmbed(configWidgetChatRoom);
   }
 
@@ -40,10 +39,6 @@ export class ChatRoomComponent implements OnInit {
     s.src = obj.link;
     s.text = obj.text;
     this.renderer2.appendChild(this.document.getElementById(obj.id), s);
-  }
-
-  private convertLocale() {
-    configWidgetChatRoom.locale = localeFormats.filter(e => e.split('_')[0] === new Intl.NumberFormat().resolvedOptions().locale)[0];
   }
 
 }

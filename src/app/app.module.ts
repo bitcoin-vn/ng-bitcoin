@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Project
 import { AppRoutes } from './app.routes';
@@ -24,6 +25,8 @@ import { SharedModule } from './shared/shared.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
 // angularx-qrcode
 import { QRCodeModule } from 'angularx-qrcode';
+// primeng
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -46,11 +49,14 @@ import { QRCodeModule } from 'angularx-qrcode';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutes,
     QRCodeModule,
     SharedModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    // ngprime
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

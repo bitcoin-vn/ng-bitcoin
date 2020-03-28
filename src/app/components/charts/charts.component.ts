@@ -22,6 +22,10 @@ export class ChartsComponent implements OnInit, AfterViewInit {
     new TradingView.widget(CONFIG);
   }
 
+  public onChangeLocale(e): void {
+    this.ngAfterViewInit();
+  }
+
   // 2. pass then in constructor
   constructor(
     private renderer2: Renderer2,
@@ -32,6 +36,8 @@ export class ChartsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.setupLocale();
+    const el = document.getElementById("widget-cryptoprices").innerHTML = '';
     const prices = {
       id: 'widget-cryptoprices',
       link: 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js',
@@ -51,6 +57,12 @@ export class ChartsComponent implements OnInit, AfterViewInit {
     s.src = obj.link;
     s.text = obj.text;
     this.renderer2.appendChild(this.document.getElementById(obj.id), s);
+  }
+
+  private setupLocale(e: string = null): void {
+    const l = localStorage.getItem('locale');
+    configWidgetChart.config.locale = e ? e : l;
+    configWidgetPrice.locale = e ? e : l;
   }
 
 }
