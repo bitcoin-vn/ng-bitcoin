@@ -1,7 +1,7 @@
 // 1. import dependencies
 import { Renderer2, Inject, Component, OnInit, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
-import { configWidgetPrice, configWidgetChart } from "../../components/config-chart/data-display";
+import { configWidgetPrice, configWidgetChart, configWidgetPriceFix, Cryptos } from "../../components/config-chart/data-display";
 declare const TradingView: any;
 
 @Component({
@@ -14,6 +14,8 @@ export class ChartsComponent implements OnInit, AfterViewInit {
 
   public activeWiget: any = this.wigets[0];
   public loadViewDone = false;
+  selectedCar2: string = 'BTC/USDT';
+  public cryptos: any[] = Cryptos;
 
   public onSelectChart(item): void {
     this.activeWiget = item;
@@ -24,6 +26,13 @@ export class ChartsComponent implements OnInit, AfterViewInit {
 
   public onChangeLocale(e): void {
     this.ngAfterViewInit();
+  }
+
+  public onChangeCryptocurrency(e): void {
+    this.onSelectChart({
+      'code': `BINANCE:${e.value.replace('/', '')}`,
+      'name': e.value
+    });
   }
 
   // 2. pass then in constructor
@@ -37,7 +46,14 @@ export class ChartsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.setupLocale();
-    const el = document.getElementById("widget-cryptoprices").innerHTML = '';
+    document.getElementById("widget-cryptoprices-fix").innerHTML = '';
+    document.getElementById("widget-cryptoprices").innerHTML = '';
+    const pricesFix = {
+      id: 'widget-cryptoprices-fix',
+      link: 'https://s3.tradingview.com/external-embedding/embed-widget-tickers.js',
+      text: JSON.stringify(configWidgetPriceFix)
+    }
+    this.renderScript(pricesFix);
     const prices = {
       id: 'widget-cryptoprices',
       link: 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js',

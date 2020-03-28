@@ -4,6 +4,8 @@
     top: 75px;
     right: -31px;
     background: #26262b;
+    // background-image: url('src/assets/images/unnamed.png');
+    // background-repeat: repeat;
     border-left: 1px solid #5a5a5a;
     height: 100vh;
     width: 0px;
@@ -12,6 +14,7 @@
   .show-hide {
     right: 0;
     width: 300px;
+    transition: width 0.1s;
   }
   .btn-show-hide {
     position: absolute;

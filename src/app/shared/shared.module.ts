@@ -4,13 +4,15 @@ import { FormsModule } from "@angular/forms";
 import { MenuRightComponent } from './components/menu-right/menu-right.component';
 // primeng
 import { DropdownModule } from 'primeng/dropdown';
+import { FieldsetModule } from 'primeng/fieldset';
 
 @NgModule({
   declarations: [MenuRightComponent],
   imports: [
     CommonModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    FieldsetModule
   ],
   exports: [
     MenuRightComponent

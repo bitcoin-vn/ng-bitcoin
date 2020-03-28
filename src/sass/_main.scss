@@ -183,9 +183,9 @@ p {
 }
 
 .shadow {
-  -moz-box-shadow: 0 0 15px #309110;
-  -webkit-box-shadow: 0 0 15px #309110;
-  box-shadow: 0 0 15px #309110
+  -moz-box-shadow: 0 0 15px #309110 !important;
+  -webkit-box-shadow: 0 0 15px #309110 !important;
+  box-shadow: 0 0 15px #309110 !important;
 }
 
 .h35 {

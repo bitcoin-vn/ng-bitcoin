@@ -1,1 +1,44 @@
-<p>convert-btc-to-altcoin works!</p>
+<section class="pt-4">
+  <div class="shadow col-md-8 d-block m-auto bg-convert">
+    <div class="p-4">
+      <h2>Convert BTC to USD</h2>
+
+      <form (submit)="this.onCalculator()">
+        <div class="row mt-3 mb-3">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="deposit">Bitcoin: <span class="text-warning">Rate</span></label>
+              <div class="input-group">
+                <div class="input-group-append">
+                  <span class="input-group-text">BTC</span>
+                </div>
+                <input (change)="this.onUpdateAmout()" class="form-control border-green" type="text" value="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="deposit">Dolar: <span class="text-warning">Rate</span></label>
+              <div class="input-group">
+                <input class="form-control border-green" type="text" value="" />
+                <div class="input-group-append">
+                  <span class="input-group-text">USD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-success mx-2">Calculate</button>
+          <button type="button" class="btn btn-outline-info mx-2">Options</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <app-menu-right (onChangeLocale)="onChangeLocale($event)">
+  </app-menu-right>
+</section>
+<footer>
+  <app-footer></app-footer>
+</footer>

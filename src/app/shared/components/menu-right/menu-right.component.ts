@@ -28,6 +28,7 @@ export class MenuRightComponent implements OnInit {
 
   locales: any[] = FullLocales;
   selected: string;
+  visibleSidebar2 = true;
 
   public onShowHide() {
     this.showHide = !this.showHide
