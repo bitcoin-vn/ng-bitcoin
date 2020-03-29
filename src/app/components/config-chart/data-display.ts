@@ -78,7 +78,39 @@ export const configWidgetChart = {
         'allow_symbol_change': true,
         'details': true,
         'show_popup_button': true,
-        'container_id': 'widget-chart'
+        'container_id': 'widget-chart',
+        "studies": [ // https://www.tradingview.com/wiki/Widget:TradingView_Widget
+            {
+                "id": "MASimple@tv-basicstudies",
+                "inputs": {
+                    "length": 50
+                }
+            },
+            {
+                "id": "MASimple@tv-basicstudies",
+                "inputs": {
+                    "length": 200
+                }
+            },
+            {
+                "id": "MAExp@tv-basicstudies",
+                "inputs": {
+                    "length": 21
+                }
+            },
+            {
+                "id": "RSI@tv-basicstudies",
+                "inputs": {
+                    "length": 14
+                }
+            },
+            {
+                "id": "BB@tv-basicstudies",
+                "inputs": {
+                    "length": 20
+                }
+            }
+        ]
     },
     type: [{
         'code': 'BINANCE:BTCUSDT',
@@ -2207,8 +2239,8 @@ configWidgetPrice.symbols = [];
 Cryptos.forEach(e => {
     configWidgetPrice.symbols.push(
         {
-            "description": e.value.replace('/',""),
-            "proName": `BINANCE:${e.value.replace('/',"")}`
+            "description": e.value.replace('/', ""),
+            "proName": `BINANCE:${e.value.replace('/', "")}`
         }
     );
 });
