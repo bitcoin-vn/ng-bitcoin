@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { FullLocales } from "../../../components/config-chart/data-display";
+import { FullLocales, Cryptos, configWidgetPrice } from "../../../components/config-chart/data-display";
 interface Locale {
   label: string,
   value: string
@@ -23,36 +23,94 @@ declare const Intl: any;
 })
 export class MenuRightComponent implements OnInit {
   @Output() public onChangeLocale = new EventEmitter();
+  @Output() public onChangeSymbol = new EventEmitter();
+  @Output() public onChangeTicket = new EventEmitter();
+  @Output() public onChangeTickerChecked = new EventEmitter();
+  @Output() public onChangeTickerTabChecked = new EventEmitter();
+
   public showHide = false;
   public piSpinner = 'default';
 
-  locales: any[] = FullLocales;
-  selected: string;
-  visibleSidebar2 = true;
+  public selectedLocale: string = 'vi_VN';
+  public locales: any[] = FullLocales;
+  public selectedSymbol: string = 'BTC/USDT';
+  public symbol: any[] = Cryptos;
+  public isTickerChecked: boolean = true;
+  public isTickerTabChecked: boolean = true;
+
+  public selectedTickets: any[];
+  public tickets: any[] = [];
 
   public onShowHide() {
     this.showHide = !this.showHide
     this.piSpinner = (this.piSpinner === 'default' ? 'rotated' : 'default');
   }
 
-  public onChange(e) {
+  public onLocale(e) {
     const locale: Locale = FullLocales.filter((f: Locale) => f.value === e.value)[0];
-    localStorage.setItem('locale', locale.value);
+    localStorage.setItem('locale_btc_vn', locale.value);
     this.onChangeLocale.emit(locale.value);
+  }
+
+  public onSymbol(e) {
+    localStorage.setItem('symbol_btc_vn', e.value);
+    this.selectedTickets = e.value;
+    this.onChangeSymbol.emit(e);
+  }
+
+  public onTicket(e) {
+    this.selectedTickets = e.value;
+    const data = JSON.stringify(e.value.map(m => ({ title: m, proName: `BINANCE:${m.replace('/', '')}` })));
+    localStorage.setItem('ticket_btc_vn', data);
+    this.onChangeTicket.emit(e);
+  }
+
+  public onTickerChecked(e): void {
+    this.onChangeTickerChecked.emit(e.checked);
+  }
+
+  public onTickerTabChecked(e): void {
+    this.onChangeTickerTabChecked.emit(e.checked);
   }
 
   constructor() {
   }
 
   ngOnInit() {
-    const localeActive = localStorage.getItem('locale');
+    this.initialLocale();
+    this.initialSymbol();
+    this.initialTicket();
+  }
+
+  private initialLocale(): void {
+    const localeActive = localStorage.getItem('locale_btc_vn');
     if (localeActive === undefined || localeActive === null) {
       const locale: Locale = FullLocales.filter((f: Locale) => f.value.split("_")[0] === new Intl.NumberFormat().resolvedOptions().locale)[0];
-      this.selected = locale.value
-      localStorage.setItem('locale', locale.value);
+      this.selectedLocale = locale.value
+      localStorage.setItem('locale_btc_vn', locale.value);
     } else {
-      this.selected = localeActive;
+      this.selectedLocale = localeActive;
     }
+  }
+
+  private initialSymbol(): void {
+    const localeSymbol = localStorage.getItem('symbol_btc_vn');
+    if (localeSymbol === undefined || localeSymbol === null) {
+      localStorage.setItem('symbol_btc_vn', 'BTC/USDT');
+    } else {
+      this.selectedSymbol = localeSymbol;
+    }
+  }
+
+  private initialTicket(): void {
+    const ticketActive = localStorage.getItem('ticket_btc_vn');
+    if (ticketActive === undefined || ticketActive === null) {
+      this.selectedTickets = configWidgetPrice.symbols.map(e => (e.title))
+      localStorage.setItem('ticket_btc_vn', JSON.stringify(configWidgetPrice.symbols));
+    } else {
+      this.selectedTickets = JSON.parse(ticketActive).map(e => (e.title));
+    }
+    this.tickets = Cryptos.map(f => ({ 'label': f.value, 'value': f.value }));
   }
 
 }

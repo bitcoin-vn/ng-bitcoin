@@ -48,7 +48,7 @@ export class ChatRoomComponent implements OnInit {
   }
 
   private setupLocale(e: string = null): void {
-    const l = localStorage.getItem('locale');
+    const l = localStorage.getItem('locale_btc_vn');
     configWidgetChatRoom.locale = e ? e : l;
     configWidgetPrice.locale = e ? e : l;
   }

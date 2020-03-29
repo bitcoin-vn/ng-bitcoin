@@ -1,36 +1,28 @@
 export const configWidgetPriceFix = {
     "symbols": [
         {
-            "description": "BTCUSDT",
+            "description": "BTC/USDT",
             "proName": "BINANCE:BTCUSDT"
         },
         {
-            "description": "BCHUSDT",
-            "proName": "BINANCE:BCHUSDT"
-        },
-        {
-            "description": "ETHUSDT",
+            "description": "ETH/USDT",
             "proName": "BINANCE:ETHUSDT"
         },
         {
-            "description": "ETCUSDT",
-            "proName": "BINANCE:ETCUSDT"
+            "description": "BCH/USDT",
+            "proName": "BINANCE:BCHUSDT"
         },
         {
-            "description": "XRPUSDT",
+            "description": "XRP/USDT",
             "proName": "BINANCE:XRPUSDT"
         },
         {
-            "description": "TRXUSDT",
+            "description": "TRX/USDT",
             "proName": "BINANCE:TRXUSDT"
         },
         {
-            "description": "XLMUSDT",
-            "proName": "BINANCE:XLMUSDT"
-        },
-        {
-            "description": "EOSUSDT",
-            "proName": "BINANCE:EOSUSDT"
+            "description": "TRX/XRP",
+            "proName": "BINANCE:TRXXRP"
         }
     ],
     "colorTheme": "dark",
@@ -40,22 +32,22 @@ export const configWidgetPriceFix = {
 
 export const configWidgetPrice = {
     "symbols": [
-        // {
-        //     "title": "BTC/USD",
-        //     "proName": "BINANCE:BTCUSDT"
-        // },
-        // {
-        //     "title": "ETH/USD",
-        //     "proName": "BINANCE:ETHUSDT"
-        // },
-        // {
-        //     "description": "XLM/USD",
-        //     "proName": "COINBASE:XLMUSD"
-        // },
-        // {
-        //     "description": "TRX/USD",
-        //     "proName": "BINANCE:TRXUSDT"
-        // }
+        {
+            "title": "BTC/USDT",
+            "proName": "BINANCE:BTCUSDT"
+        },
+        {
+            "title": "EOS/USDT",
+            "proName": "BINANCE:EOSUSDT"
+        },
+        {
+            "title": "XLM/USDT",
+            "proName": "BINANCE:XLMUSDT"
+        },
+        {
+            "title": "ETC/USDT",
+            "proName": "BINANCE:ETCUSDT"
+        }
     ],
     "colorTheme": "dark",
     "isTransparent": false,
@@ -650,6 +642,10 @@ export const FullLocales: any[] = [
 
 export const Cryptos: any[] = [
     {
+        label: "Bitcoin",
+        value: "BTC/USDT"
+    },
+    {
         label: "Ethereum",
         value: "ETH/USDT"
     },
@@ -661,26 +657,7 @@ export const Cryptos: any[] = [
         label: "XRP",
         value: "XRP/USDT"
     },
-    {
-        label: "Bitcoin Cash",
-        value: "BCH/USDT"
-    },
-    // {
-    //     label: "3X Short Bitcoin Token",
-    //     value: "BEAR/USDT"
-    // },
-    // {
-    //     label: "3X Short Ethereum Token",
-    //     value: "ETHBEAR/USDT"
-    // },
-    // {
-    //     label: "3X Long Bitcoin Token",
-    //     value: "BULL/USDT"
-    // },
-    {
-        label: "Ethereum",
-        value: "ETH/BTC"
-    },
+
     {
         label: "Binance Coin",
         value: "BNB/USDT"
@@ -693,10 +670,6 @@ export const Cryptos: any[] = [
         label: "EOS",
         value: "EOS/USDT"
     },
-    // {
-    //     label: "3X Long Ethereum Token",
-    //     value: "ETHBULL/USDT"
-    // },
     {
         label: "Bitcoin",
         value: "BTC/USDB"
@@ -721,10 +694,7 @@ export const Cryptos: any[] = [
         label: "EOS",
         value: "EOS/USDT"
     },
-    {
-        label: "XRP",
-        value: "XRP/BTC"
-    },
+
     {
         label: "Ethereum Classic",
         value: "ETC/USDT"
@@ -749,10 +719,7 @@ export const Cryptos: any[] = [
         label: "Tezos",
         value: "XTZ/USDT"
     },
-    {
-        label: "Binance Coin",
-        value: "BNB/BTC"
-    },
+
     {
         label: "Ethereum Classic",
         value: "ETC/USDT"
@@ -770,10 +737,6 @@ export const Cryptos: any[] = [
         value: "XMR/USDT"
     },
     {
-        label: "Bitcoin",
-        value: "BTC/USDT"
-    },
-    {
         label: "TRON",
         value: "TRX/USDT"
     },
@@ -785,34 +748,13 @@ export const Cryptos: any[] = [
         label: "TrueUSD",
         value: "TUSD/USDT"
     },
-    {
-        label: "Bitcoin Cash",
-        value: "BCH/BTC"
-    },
-    {
-        label: "Etherparty",
-        value: "FUEL/BTC"
-    },
+
+
     {
         label: "Monero",
         value: "XMR/USDT"
     },
-    {
-        label: "EOS",
-        value: "EOS/BTC"
-    },
-    {
-        label: "Bitcoin",
-        value: "BTC/PAX"
-    },
-    {
-        label: "Litecoin",
-        value: "LTC/BTC"
-    },
-    {
-        label: "Chainlink",
-        value: "LINK/BTC"
-    },
+
     {
         label: "TRON",
         value: "TRX/USDT"
@@ -821,38 +763,17 @@ export const Cryptos: any[] = [
         label: "VeChain",
         value: "VET/USDT"
     },
-    {
-        label: "Dash",
-        value: "DASH/BTC"
-    },
-    // {
-    //     label: "3X Long BNB Token",
-    //     value: "BNBBULL/USDT"
-    // },
+
     {
         label: "Paxos Standard",
         value: "PAX/USDT"
     },
-    {
-        label: "Cortex",
-        value: "CTXC/BTC"
-    },
-    {
-        label: "Monero",
-        value: "XMR/BTC"
-    },
+
     {
         label: "Zcash",
         value: "ZEC/USDT"
     },
-    {
-        label: "Metal",
-        value: "MTL/BTC"
-    },
-    {
-        label: "Tezos",
-        value: "XTZ/BTC"
-    },
+
     {
         label: "Stellar",
         value: "XLM/USDT"
@@ -869,10 +790,7 @@ export const Cryptos: any[] = [
         label: "Matic Network",
         value: "MATIC/USDT"
     },
-    {
-        label: "iExec RLC",
-        value: "RLC/BTC"
-    },
+
     {
         label: "Neo",
         value: "NEO/USDT"
@@ -881,10 +799,7 @@ export const Cryptos: any[] = [
         label: "Zcash",
         value: "ZEC/USDT"
     },
-    {
-        label: "Agrello",
-        value: "DLT/BTC"
-    },
+
     {
         label: "WazirX",
         value: "WRX/USDT"
@@ -905,10 +820,6 @@ export const Cryptos: any[] = [
         label: "Ethereum",
         value: "ETH/BUSD"
     },
-    // {
-    //     label: "3X Short BNB Token",
-    //     value: "BNBBEAR/USDT"
-    // },
     {
         label: "Cosmos",
         value: "ATOM/USDT"
@@ -917,18 +828,7 @@ export const Cryptos: any[] = [
         label: "Ethereum",
         value: "ETH/TUSD"
     },
-    {
-        label: "WazirX",
-        value: "WRX/BTC"
-    },
-    {
-        label: "Enigma",
-        value: "ENG/BTC"
-    },
-    {
-        label: "Matic Network",
-        value: "MATIC/BTC"
-    },
+
     {
         label: "Cortex",
         value: "CTXC/USDT"
@@ -949,42 +849,25 @@ export const Cryptos: any[] = [
         label: "VeChain",
         value: "VET/USDT"
     },
-    {
-        label: "Streamr DATAcoin",
-        value: "DATA/BTC"
-    },
+
     {
         label: "Ontology",
         value: "ONT/USDT"
     },
-    {
-        label: "Hedera Hashgraph",
-        value: "HBAR/BTC"
-    },
+
     {
         label: "Elrond",
         value: "ERD/USDT"
     },
-    // {
-    //     label: "3X Short Bitcoin Token",
-    //     value: "BEAR/BUSD"
-    // },
     {
         label: "Metal",
         value: "MTL/USDT"
     },
+
     {
-        label: "Cardano",
-        value: "ADA/BTC"
-    },
-    {
-        label: "Basic Attention Token",
+        label: "Basic Attention",
         value: "BAT/USDT"
     },
-    // {
-    //     label: "3X Long Bitcoin Token",
-    //     value: "BULL/BUSD"
-    // },
     {
         label: "IOST",
         value: "IOST/USDT"
@@ -993,58 +876,18 @@ export const Cryptos: any[] = [
         label: "Hedera Hashgraph",
         value: "HBAR/USDT"
     },
-    {
-        label: "Stellar",
-        value: "XLM/BTC"
-    },
+
     {
         label: "BitTorrent",
         value: "BTT/USDT"
     },
-    {
-        label: "Kyber Network",
-        value: "KNC/BTC"
-    },
-    {
-        label: "Dusk Network",
-        value: "DUSK/BTC"
-    },
-    // {
-    //     label: "3X Long Ethereum Token",
-    //     value: "ETHBULL/BUSD"
-    // },
+
+
     {
         label: "Litecoin",
         value: "LTC/USDC"
     },
-    {
-        label: "Cosmos",
-        value: "ATOM/BTC"
-    },
-    {
-        label: "Enjin Coin",
-        value: "ENJ/BTC"
-    },
-    // {
-    //     label: "3X Short Ethereum Token",
-    //     value: "ETHBEAR/BUSD"
-    // },
-    {
-        label: "Zcash",
-        value: "ZEC/BTC"
-    },
-    {
-        label: "TRON",
-        value: "TRX/BTC"
-    },
-    {
-        label: "Fetch.ai",
-        value: "FET/BTC"
-    },
-    {
-        label: "Ethereum",
-        value: "ETH/PAX"
-    },
+
     {
         label: "Ontology",
         value: "ONT/USDT"
@@ -1053,46 +896,12 @@ export const Cryptos: any[] = [
         label: "ICON",
         value: "ICX/USDT"
     },
-    {
-        label: "Chiliz",
-        value: "CHZ/BTC"
-    },
-    {
-        label: "Neo",
-        value: "NEO/BTC"
-    },
-    {
-        label: "Augur",
-        value: "REP/BTC"
-    },
-    {
-        label: "XRP",
-        value: "XRP/ETH"
-    },
+
     {
         label: "Origin Protocol",
         value: "OGN/USDT"
     },
-    {
-        label: "Algorand",
-        value: "ALGO/BTC"
-    },
-    {
-        label: "Origin Protocol",
-        value: "OGN/BTC"
-    },
-    {
-        label: "AppCoins",
-        value: "APPC/BTC"
-    },
-    {
-        label: "Binance Coin",
-        value: "BNB/ETH"
-    },
-    {
-        label: "Basic Attention Token",
-        value: "BAT/BTC"
-    },
+
     {
         label: "IOTA",
         value: "IOTA/USDT"
@@ -1109,22 +918,12 @@ export const Cryptos: any[] = [
         label: "Fetch.ai",
         value: "FET/USDT"
     },
-    {
-        label: "VeChain",
-        value: "VET/BTC"
-    },
+
     {
         label: "iExec RLC",
         value: "RLC/USDT"
     },
-    // {
-    //     label: "COTI",
-    //     value: "COTI/BTC"
-    // },
-    {
-        label: "Everex",
-        value: "EVX/BTC"
-    },
+
     {
         label: "XRP",
         value: "XRP/BUSD"
@@ -1137,30 +936,17 @@ export const Cryptos: any[] = [
         label: "WINk",
         value: "WIN/USDT"
     },
-    {
-        label: "Steem",
-        value: "STEEM/BTC"
-    },
+
     {
         label: "Dogecoin",
         value: "DOGE/USDT"
     },
-    {
-        label: "Bitcoin",
-        value: "BTC/NGN"
-    },
+
     {
         label: "Enjin Coin",
         value: "ENJ/USDT"
     },
-    {
-        label: "Standard Tokenization Protocol",
-        value: "STPT/BTC"
-    },
-    {
-        label: "TRON",
-        value: "TRX/ETH"
-    },
+
     {
         label: "Litecoin",
         value: "LTC/TUSD"
@@ -1169,46 +955,17 @@ export const Cryptos: any[] = [
         label: "Bitcoin Cash",
         value: "BCH/USDC"
     },
-    {
-        label: "Ravencoin",
-        value: "RVN/BTC"
-    },
-    {
-        label: "EOS",
-        value: "EOS/ETH"
-    },
+
     {
         label: "Binance Coin",
         value: "BNB/BUSD"
     },
-    {
-        label: "WePower",
-        value: "WPR/BTC"
-    },
-    {
-        label: "Status",
-        value: "SNT/BTC"
-    },
-    {
-        label: "Bitcoin Cash",
-        value: "BCH/PAX"
-    },
-    {
-        label: "NULS",
-        value: "NULS/BTC"
-    },
-    {
-        label: "Elrond",
-        value: "ERD/BTC"
-    },
+
     {
         label: "XRP",
         value: "XRP/USDC"
     },
-    {
-        label: "ICON",
-        value: "ICX/BTC"
-    },
+
     {
         label: "Waves",
         value: "WAVES/USDT"
@@ -1229,82 +986,22 @@ export const Cryptos: any[] = [
         label: "Ravencoin",
         value: "RVN/USDT"
     },
-    {
-        label: "Waves",
-        value: "WAVES/BTC"
-    },
-    // {
-    //     label: "3X Long BNB Token",
-    //     value: "BNBBULL/BUSD"
-    // },
-    {
-        label: "Syscoin",
-        value: "SYS/BTC"
-    },
-    {
-        label: "Blockstack",
-        value: "STX/BTC"
-    },
-    {
-        label: "MCO",
-        value: "MCO/BTC"
-    },
-    {
-        label: "THETA",
-        value: "THETA/BTC"
-    },
-    {
-        label: "TomoChain",
-        value: "TOMO/BTC"
-    },
+
     {
         label: "TomoChain",
         value: "TOMO/USDT"
     },
-    {
-        label: "Loopring",
-        value: "LRC/BTC"
-    },
-    {
-        label: "Qtum",
-        value: "QTUM/BTC"
-    },
-    {
-        label: "Harmony",
-        value: "ONE/BTC"
-    },
-    {
-        label: "Perlin",
-        value: "PERL/BTC"
-    },
-    {
-        label: "Band Protocol",
-        value: "BAND/BTC"
-    },
-    {
-        label: "Blockmason Credit Protocol",
-        value: "BCPT/BTC"
-    },
+
     {
         label: "Dusk Network",
         value: "DUSK/USDT"
     },
-    {
-        label: "Ontology",
-        value: "ONT/BTC"
-    },
-    {
-        label: "Viberate",
-        value: "VIB/BTC"
-    },
+
     {
         label: "NULS",
         value: "NULS/USDT"
     },
-    {
-        label: "Ankr",
-        value: "ANKR/BTC"
-    },
+
     {
         label: "Aion",
         value: "AION/USDT"
@@ -1317,10 +1014,7 @@ export const Cryptos: any[] = [
         label: "XRP",
         value: "XRP/TUSD"
     },
-    {
-        label: "IOTA",
-        value: "IOTA/BTC"
-    },
+
     {
         label: "COTI",
         value: "COTI/USDT"
@@ -1337,94 +1031,33 @@ export const Cryptos: any[] = [
         label: "Bitcoin Cash",
         value: "BCH/BNB"
     },
-    {
-        label: "NEM",
-        value: "XEM/BTC"
-    },
+
     {
         label: "Zilliqa",
         value: "ZIL/USDT"
     },
-    {
-        label: "Waltonchain",
-        value: "WTC/BTC"
-    },
-    {
-        label: "Ren",
-        value: "REN/BTC"
-    },
-    {
-        label: "Aion",
-        value: "AION/BTC"
-    },
-    {
-        label: "Dogecoin",
-        value: "DOGE/BTC"
-    },
-    {
-        label: "Eidoo",
-        value: "EDO/BTC"
-    },
-    {
-        label: "Nebulas",
-        value: "NAS/BTC"
-    },
+
     {
         label: "Chiliz",
         value: "CHZ/USDT"
     },
-    {
-        label: "Aeron",
-        value: "ARN/BTC"
-    },
-    {
-        label: "0x",
-        value: "ZRX/BTC"
-    },
-    {
-        label: "Nano",
-        value: "NANO/BTC"
-    },
-    {
-        label: "FTX Token",
-        value: "FTT/BTC"
-    },
+
+
     {
         label: "Nano",
         value: "NANO/USDT"
     },
-    {
-        label: "Bitcoin Gold",
-        value: "BTG/BTC"
-    },
-    {
-        label: "GoChain",
-        value: "GO/BTC"
-    },
+
     {
         label: "EOS",
         value: "EOS/USDC"
     },
-    {
-        label: "LTO Network",
-        value: "LTO/BTC"
-    },
+
     {
         label: "Blockstack",
         value: "STX/USDT"
     },
-    {
-        label: "Metal",
-        value: "MTL/ETH"
-    },
-    {
-        label: "Litecoin",
-        value: "LTC/PAX"
-    },
-    {
-        label: "Power Ledger",
-        value: "POWR/BTC"
-    },
+
     {
         label: "0x",
         value: "ZRX/USDT"
@@ -1433,34 +1066,17 @@ export const Cryptos: any[] = [
         label: "Perlin",
         value: "PERL/USDT"
     },
-    {
-        label: "EOS",
-        value: "EOS/BNB"
-    },
-    {
-        label: "aelf",
-        value: "ELF/BTC"
-    },
+
     {
         label: "Litecoin",
         value: "LTC/BUSD"
     },
-    // {
-    //     label: "3X Short BNB Token",
-    //     value: "BNBBEAR/BUSD"
-    // },
-    {
-        label: "PIVX",
-        value: "PIVX/BTC"
-    },
+
     {
         label: "Kava",
         value: "KAVA/USDT"
     },
-    {
-        label: "Litecoin",
-        value: "LTC/ETH"
-    },
+
     {
         label: "Harmony",
         value: "ONE/USDT"
@@ -1469,86 +1085,22 @@ export const Cryptos: any[] = [
         label: "Standard Tokenization Protocol",
         value: "STPT/USDT"
     },
-    {
-        label: "Lisk",
-        value: "LSK/BTC"
-    },
-    {
-        label: "HyperCash",
-        value: "HC/BTC"
-    },
-    {
-        label: "Bitcoin",
-        value: "BTC/TRY"
-    },
-    {
-        label: "Tether",
-        value: "USDT/TRY"
-    },
-    {
-        label: "Blox",
-        value: "CDT/BTC"
-    },
-    {
-        label: "Aave",
-        value: "LEND/BTC"
-    },
-    {
-        label: "Bread",
-        value: "BRD/BTC"
-    },
-    {
-        label: "Beam",
-        value: "BEAM/BTC"
-    },
-    {
-        label: "Verge",
-        value: "XVG/BTC"
-    },
-    {
-        label: "Stratis",
-        value: "STRAT/BTC"
-    },
+
     {
         label: "THETA",
         value: "THETA/USDT"
     },
-    {
-        label: "OmiseGO",
-        value: "OMG/BTC"
-    },
-    {
-        label: "Decentraland",
-        value: "MANA/BTC"
-    },
-    {
-        label: "iExec RLC",
-        value: "RLC/ETH"
-    },
-    {
-        label: "YOYOW",
-        value: "YOYO/BTC"
-    },
-    {
-        label: "SingularityNET",
-        value: "AGI/BTC"
-    },
+
     {
         label: "TRON",
         value: "TRX/USDC"
     },
-    {
-        label: "VIBE",
-        value: "VIBE/BTC"
-    },
+
     {
         label: "Chainlink",
         value: "LINK/USDC"
     },
-    {
-        label: "Storj",
-        value: "STORJ/BTC"
-    },
+
     {
         label: "Holo",
         value: "HOT/USDT"
@@ -1561,14 +1113,7 @@ export const Cryptos: any[] = [
         label: "Beam",
         value: "BEAM/USDT"
     },
-    {
-        label: "Aeternity",
-        value: "AE/BTC"
-    },
-    {
-        label: "Fantom",
-        value: "FTM/BTC"
-    },
+
     {
         label: "Ren",
         value: "REN/USDT"
@@ -1577,78 +1122,17 @@ export const Cryptos: any[] = [
         label: "TRON",
         value: "TRX/BUSD"
     },
-    {
-        label: "Dash",
-        value: "DASH/ETH"
-    },
-    {
-        label: "Zilliqa",
-        value: "ZIL/BTC"
-    },
-    {
-        label: "TROY",
-        value: "TROY/BTC"
-    },
-    {
-        label: "TRON",
-        value: "TRX/BNB"
-    },
-    {
-        label: "TRON",
-        value: "TRX/XRP"
-    },
-    {
-        label: "Raiden Network Token",
-        value: "RDN/BTC"
-    },
+
     {
         label: "EOS",
         value: "EOS/BUSD"
     },
-    {
-        label: "Tael",
-        value: "WABI/BTC"
-    },
-    {
-        label: "Bitcoin",
-        value: "BTC/RUB"
-    },
-    {
-        label: "Kava",
-        value: "KAVA/BTC"
-    },
-    {
-        label: "Enigma",
-        value: "ENG/ETH"
-    },
-    {
-        label: "VeChain",
-        value: "VET/ETH"
-    },
+
     {
         label: "OmiseGO",
         value: "OMG/USDT"
     },
-    {
-        label: "Moeda Loyalty Points",
-        value: "MDA/BTC"
-    },
-    {
-        label: "XRP",
-        value: "XRP/PAX"
-    },
-    {
-        label: "Kyber Network",
-        value: "KNC/ETH"
-    },
-    {
-        label: "IOST",
-        value: "IOST/BTC"
-    },
-    {
-        label: "Voyager Token",
-        value: "BQX/BTC"
-    },
+
     {
         label: "Binance Coin",
         value: "BNB/TUSD"
@@ -1657,54 +1141,12 @@ export const Cryptos: any[] = [
         label: "Fantom",
         value: "FTM/USDT"
     },
-    {
-        label: "Lunyr",
-        value: "LUN/BTC"
-    },
-    {
-        label: "OAX",
-        value: "OAX/BTC"
-    },
-    {
-        label: "Cardano",
-        value: "ADA/ETH"
-    },
-    {
-        label: "Ark",
-        value: "ARK/BTC"
-    },
+
     {
         label: "FTX Token",
         value: "FTT/USDT"
     },
-    {
-        label: "Neblio",
-        value: "NEBL/BTC"
-    },
-    {
-        label: "Loom Network",
-        value: "LOOM/BTC"
-    },
-    {
-        label: "Decred",
-        value: "DCR/BTC"
-    },
-    {
-        label: "Populous",
-        value: "PPT/BTC"
-    },
-    {
-        label: "Storm",
-        value: "STORM/BTC"
-    },
-    {
-        label: "Po.et",
-        value: "POE/BTC"
-    },
-    {
-        label: "TRON",
-        value: "TRX/PAX"
-    },
+
     {
         label: "Chainlink",
         value: "LINK/BUSD"
@@ -2232,15 +1674,514 @@ export const Cryptos: any[] = [
     {
         label: "Cocos-BCX",
         value: "COCOS/USDT"
+    },
+    {
+        label: "Ethereum",
+        value: "ETH/BTC"
+    }, {
+        label: "XRP",
+        value: "XRP/BTC"
+    }, {
+        label: "Binance Coin",
+        value: "BNB/BTC"
+    }, {
+        label: "Bitcoin Cash",
+        value: "BCH/BTC"
+    }, {
+        label: "EOS",
+        value: "EOS/BTC"
+    },
+    {
+        label: "Bitcoin",
+        value: "BTC/PAX"
+    },
+    {
+        label: "Litecoin",
+        value: "LTC/BTC"
+    },
+    {
+        label: "Chainlink",
+        value: "LINK/BTC"
+    }, {
+        label: "Etherparty",
+        value: "FUEL/BTC"
+    }, {
+        label: "Dash",
+        value: "DASH/BTC"
+    }, {
+        label: "Cortex",
+        value: "CTXC/BTC"
+    },
+    {
+        label: "Monero",
+        value: "XMR/BTC"
+    }, {
+        label: "Metal",
+        value: "MTL/BTC"
+    },
+    {
+        label: "Tezos",
+        value: "XTZ/BTC"
+    }, {
+        label: "iExec RLC",
+        value: "RLC/BTC"
+    }, {
+        label: "Agrello",
+        value: "DLT/BTC"
+    }, {
+        label: "WazirX",
+        value: "WRX/BTC"
+    },
+    {
+        label: "Enigma",
+        value: "ENG/BTC"
+    },
+    {
+        label: "Matic Network",
+        value: "MATIC/BTC"
+    }, {
+        label: "Streamr DATAcoin",
+        value: "DATA/BTC"
+    }, {
+        label: "Hedera Hashgraph",
+        value: "HBAR/BTC"
+    }, {
+        label: "Cardano",
+        value: "ADA/BTC"
+    }, {
+        label: "Stellar",
+        value: "XLM/BTC"
+    }, {
+        label: "Kyber Network",
+        value: "KNC/BTC"
+    }, {
+        label: "Dusk Network",
+        value: "DUSK/BTC"
+    }, {
+        label: "Cosmos",
+        value: "ATOM/BTC"
+    },
+    {
+        label: "Enjin Coin",
+        value: "ENJ/BTC"
+    },
+    {
+        label: "Zcash",
+        value: "ZEC/BTC"
+    },
+    {
+        label: "TRON",
+        value: "TRX/BTC"
+    },
+    {
+        label: "Fetch.ai",
+        value: "FET/BTC"
+    },
+    {
+        label: "Ethereum",
+        value: "ETH/PAX"
+    }, {
+        label: "Chiliz",
+        value: "CHZ/BTC"
+    },
+    {
+        label: "Neo",
+        value: "NEO/BTC"
+    },
+    {
+        label: "Augur",
+        value: "REP/BTC"
+    },
+    {
+        label: "XRP",
+        value: "XRP/ETH"
+    }, {
+        label: "Algorand",
+        value: "ALGO/BTC"
+    },
+    {
+        label: "Origin Protocol",
+        value: "OGN/BTC"
+    },
+    {
+        label: "AppCoins",
+        value: "APPC/BTC"
+    },
+    {
+        label: "Binance Coin",
+        value: "BNB/ETH"
+    },
+    {
+        label: "Basic Attention Token",
+        value: "BAT/BTC"
+    }, {
+        label: "VeChain",
+        value: "VET/BTC"
+    }, {
+        label: "COTI",
+        value: "COTI/BTC"
+    },
+    {
+        label: "Everex",
+        value: "EVX/BTC"
+    }, {
+        label: "Steem",
+        value: "STEEM/BTC"
+    }, {
+        label: "Bitcoin",
+        value: "BTC/NGN"
+    }, {
+        label: "Standard Tokenization Protocol",
+        value: "STPT/BTC"
+    },
+    {
+        label: "TRON",
+        value: "TRX/ETH"
+    }, {
+        label: "Ravencoin",
+        value: "RVN/BTC"
+    },
+    {
+        label: "EOS",
+        value: "EOS/ETH"
+    }, {
+        label: "WePower",
+        value: "WPR/BTC"
+    },
+    {
+        label: "Status",
+        value: "SNT/BTC"
+    },
+    {
+        label: "Bitcoin Cash",
+        value: "BCH/PAX"
+    },
+    {
+        label: "NULS",
+        value: "NULS/BTC"
+    },
+    {
+        label: "Elrond",
+        value: "ERD/BTC"
+    }, {
+        label: "ICON",
+        value: "ICX/BTC"
+    }, {
+        label: "Waves",
+        value: "WAVES/BTC"
+    },
+    {
+        label: "Syscoin",
+        value: "SYS/BTC"
+    },
+    {
+        label: "Blockstack",
+        value: "STX/BTC"
+    },
+    {
+        label: "MCO",
+        value: "MCO/BTC"
+    },
+    {
+        label: "THETA",
+        value: "THETA/BTC"
+    },
+    {
+        label: "TomoChain",
+        value: "TOMO/BTC"
+    }, {
+        label: "Loopring",
+        value: "LRC/BTC"
+    },
+    {
+        label: "Qtum",
+        value: "QTUM/BTC"
+    },
+    {
+        label: "Harmony",
+        value: "ONE/BTC"
+    },
+    {
+        label: "Perlin",
+        value: "PERL/BTC"
+    },
+    {
+        label: "Band Protocol",
+        value: "BAND/BTC"
+    },
+    {
+        label: "Blockmason Credit Protocol",
+        value: "BCPT/BTC"
+    }, {
+        label: "Ontology",
+        value: "ONT/BTC"
+    },
+    {
+        label: "Viberate",
+        value: "VIB/BTC"
+    }, {
+        label: "Ankr",
+        value: "ANKR/BTC"
+    }, {
+        label: "IOTA",
+        value: "IOTA/BTC"
+    }, {
+        label: "NEM",
+        value: "XEM/BTC"
+    }, {
+        label: "Waltonchain",
+        value: "WTC/BTC"
+    },
+    {
+        label: "Ren",
+        value: "REN/BTC"
+    },
+    {
+        label: "Aion",
+        value: "AION/BTC"
+    },
+    {
+        label: "Dogecoin",
+        value: "DOGE/BTC"
+    },
+    {
+        label: "Eidoo",
+        value: "EDO/BTC"
+    },
+    {
+        label: "Nebulas",
+        value: "NAS/BTC"
+    }, {
+        label: "0x",
+        value: "ZRX/BTC"
+    },
+    {
+        label: "Nano",
+        value: "NANO/BTC"
+    },
+    {
+        label: "FTX Token",
+        value: "FTT/BTC"
+    }, {
+        label: "Bitcoin Gold",
+        value: "BTG/BTC"
+    },
+    {
+        label: "GoChain",
+        value: "GO/BTC"
+    }, {
+        label: "Aeron",
+        value: "ARN/BTC"
+    }, {
+        label: "LTO Network",
+        value: "LTO/BTC"
+    }, {
+        label: "Metal",
+        value: "MTL/ETH"
+    },
+    {
+        label: "Litecoin",
+        value: "LTC/PAX"
+    },
+    {
+        label: "Power Ledger",
+        value: "POWR/BTC"
+    }, {
+        label: "EOS",
+        value: "EOS/BNB"
+    },
+    {
+        label: "aelf",
+        value: "ELF/BTC"
+    }, {
+        label: "PIVX",
+        value: "PIVX/BTC"
+    }, {
+        label: "Litecoin",
+        value: "LTC/ETH"
+    }, {
+        label: "Lisk",
+        value: "LSK/BTC"
+    },
+    {
+        label: "HyperCash",
+        value: "HC/BTC"
+    },
+    {
+        label: "Bitcoin",
+        value: "BTC/TRY"
+    },
+    {
+        label: "Tether",
+        value: "USDT/TRY"
+    },
+    {
+        label: "Blox",
+        value: "CDT/BTC"
+    },
+    {
+        label: "Aave",
+        value: "LEND/BTC"
+    },
+    {
+        label: "Bread",
+        value: "BRD/BTC"
+    },
+    {
+        label: "Beam",
+        value: "BEAM/BTC"
+    },
+    {
+        label: "Verge",
+        value: "XVG/BTC"
+    },
+    {
+        label: "Stratis",
+        value: "STRAT/BTC"
+    }, {
+        label: "OmiseGO",
+        value: "OMG/BTC"
+    },
+    {
+        label: "Decentraland",
+        value: "MANA/BTC"
+    },
+    {
+        label: "iExec RLC",
+        value: "RLC/ETH"
+    },
+    {
+        label: "YOYOW",
+        value: "YOYO/BTC"
+    },
+    {
+        label: "SingularityNET",
+        value: "AGI/BTC"
+    }, {
+        label: "VIBE",
+        value: "VIBE/BTC"
+    }, {
+        label: "Storj",
+        value: "STORJ/BTC"
+    }, {
+        label: "Aeternity",
+        value: "AE/BTC"
+    },
+    {
+        label: "Fantom",
+        value: "FTM/BTC"
+    }, {
+        label: "Dash",
+        value: "DASH/ETH"
+    },
+    {
+        label: "Zilliqa",
+        value: "ZIL/BTC"
+    },
+    {
+        label: "TROY",
+        value: "TROY/BTC"
+    },
+    {
+        label: "TRON",
+        value: "TRX/BNB"
+    },
+    {
+        label: "TRON",
+        value: "TRX/XRP"
+    },
+    {
+        label: "Raiden Network Token",
+        value: "RDN/BTC"
+    }, {
+        label: "Tael",
+        value: "WABI/BTC"
+    },
+    {
+        label: "Bitcoin",
+        value: "BTC/RUB"
+    },
+    {
+        label: "Kava",
+        value: "KAVA/BTC"
+    },
+    {
+        label: "Enigma",
+        value: "ENG/ETH"
+    },
+    {
+        label: "VeChain",
+        value: "VET/ETH"
+    }, {
+        label: "Moeda Loyalty Points",
+        value: "MDA/BTC"
+    },
+    {
+        label: "XRP",
+        value: "XRP/PAX"
+    },
+    {
+        label: "Kyber Network",
+        value: "KNC/ETH"
+    },
+    {
+        label: "IOST",
+        value: "IOST/BTC"
+    },
+    {
+        label: "Voyager Token",
+        value: "BQX/BTC"
+    }, {
+        label: "Lunyr",
+        value: "LUN/BTC"
+    },
+    {
+        label: "OAX",
+        value: "OAX/BTC"
+    },
+    {
+        label: "Cardano",
+        value: "ADA/ETH"
+    },
+    {
+        label: "Ark",
+        value: "ARK/BTC"
+    }, {
+        label: "Neblio",
+        value: "NEBL/BTC"
+    },
+    {
+        label: "Loom Network",
+        value: "LOOM/BTC"
+    },
+    {
+        label: "Decred",
+        value: "DCR/BTC"
+    },
+    {
+        label: "Populous",
+        value: "PPT/BTC"
+    },
+    {
+        label: "Storm",
+        value: "STORM/BTC"
+    },
+    {
+        label: "Po.et",
+        value: "POE/BTC"
+    },
+    {
+        label: "TRON",
+        value: "TRX/PAX"
     }
 ];
 
-configWidgetPrice.symbols = [];
-Cryptos.forEach(e => {
-    configWidgetPrice.symbols.push(
-        {
-            "description": e.value.replace('/', ""),
-            "proName": `BINANCE:${e.value.replace('/', "")}`
-        }
-    );
-});
+// configWidgetPrice.symbols = [];
+// Cryptos.forEach(e => {
+//     configWidgetPrice.symbols.push(
+//         {
+//             "description": e.value.replace('/', ""),
+//             "proName": `BINANCE:${e.value.replace('/', "")}`
+//         }
+//     );
+// });

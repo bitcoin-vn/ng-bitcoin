@@ -12,6 +12,7 @@ import { ConvertBtcToUsdComponent } from "src/app/components/convert-btc-to-usd/
 import { ConvertUsdToBtcComponent } from "src/app/components/convert-usd-to-btc/convert-usd-to-btc.component";
 import { CryptocurrencyComponent } from "src/app/components/cryptocurrency/cryptocurrency.component";
 import { GoogleTrendsComponent } from "src/app/components/google-trends/google-trends.component";
+import { MyNotesComponent } from "src/app/components/my-notes/my-notes.component";
 
 
 const routes: Routes = [
@@ -49,7 +50,10 @@ const routes: Routes = [
       }, {
         path: 'chat-room',
         component: ChatRoomComponent
-      },
+      }, {
+        path: 'notes',
+        component: MyNotesComponent
+      }
     ]
   }, {
     path: '**',

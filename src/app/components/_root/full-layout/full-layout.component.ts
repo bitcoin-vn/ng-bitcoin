@@ -1,5 +1,5 @@
 // 1. import dependencies
-import { Inject, Component, OnInit, AfterViewInit } from '@angular/core';
+import { Inject, Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
 import { Router } from "@angular/router";
 
@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
   templateUrl: './full-layout.component.html',
   styleUrls: ['./full-layout.component.scss']
 })
-export class FullLayoutComponent implements OnInit {
+export class FullLayoutComponent implements OnInit, OnDestroy {
 
   // 2. pass then in constructor
   constructor(
@@ -25,6 +25,9 @@ export class FullLayoutComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
   }
 
 }

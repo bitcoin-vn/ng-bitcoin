@@ -32,54 +32,42 @@ body {
   min-width: 780px
 }
 
-#menu-response,
-#nav-bar-collapse {
-  display: none
-}
-
-#nav-bar-collapse h6,
-#nav-bar-collapse ul {
+.menu-collapse {
   text-align: center;
-  list-style-type: none
-}
-
-@media all and (min-width:800px) {}
-
-@media all and (max-width:800px) {
-  #nav {
-    width: 0
+  background: #253d2873;
+  li {
+    list-style-type: none;
   }
-  #main {
-    left: 0;
-    min-width: 0
-  }
-  #nav-bar-collapse {
-    display: none;
-    background: #253d2873
-  }
-  #menu-response {
-    display: block !important;
-    position: fixed;
-    top: 23px;
-    left: 23px
-  }
-  #nav-bar-collapse ul {
-    margin-left: -42px !important
-  }
-  #nav-bar-collapse ul li {
-    line-height: 30px
-  }
-  #nav-bar-collapse ul li:hover {
+  li:hover {
     font-size: 18px;
     display: block;
     background: #253d2852 !important;
     -moz-box-shadow: -2px 0 14px rgba(45, 92, 29, .32);
     -webkit-box-shadow: -2px 0 14px #253d2852;
-    box-shadow: -2px 0 14px #253d2852
+    box-shadow: -2px 0 14px #253d2852;
   }
-  #nav-bar-collapse ul li a:hover {
-    color: #97bb0f !important;
-    text-decoration: none !important
+}
+
+@media all and (min-width:800px) {
+  .menu-collapse {
+    display: none;
+  }
+}
+
+@media all and (max-width:800px) {
+  #nav {
+    display: none;
+  }
+  #main {
+    left: 0;
+    min-width: 0
+  }
+  #menu-response {
+    display: block !important;
+    position: fixed;
+    top: 23px;
+    left: 23px;
+    z-index: 9999;
   }
   #main h2 span {
     font-size: 23px !important
@@ -89,11 +77,7 @@ body {
   }
 }
 
-@media all and (min-width:799px) {
-  #nav-bar-collapse {
-    display: none !important
-  }
-}
+@media all and (min-width:799px) {}
 
 @media all and (max-width:400px) {
   #main h2 span {

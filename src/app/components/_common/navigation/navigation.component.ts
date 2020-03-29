@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from "ngx-bootstrap";
+import { Menu } from "../navigation/menu";
 
 @Component({
   selector: 'app-navigation',
@@ -11,6 +12,8 @@ export class NavigationComponent implements OnInit {
   modalRef: BsModalRef;
   qrdata: string;
   btcAddress: string;
+  menu: any[] = Menu;
+
   constructor(private modalService: BsModalService) { }
 
   openModal(template: TemplateRef<any>) {
