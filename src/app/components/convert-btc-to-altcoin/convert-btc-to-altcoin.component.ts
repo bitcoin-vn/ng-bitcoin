@@ -25,7 +25,7 @@ export class ConvertBtcToAltcoinComponent implements OnInit {
   ngOnInit() {
   }
 
-  onChangeLocale() {}
+  onChangeLocale(e) {}
 
   onUpdateAmout() {}
   

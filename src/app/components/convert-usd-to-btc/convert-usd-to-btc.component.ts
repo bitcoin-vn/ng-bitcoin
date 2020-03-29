@@ -25,7 +25,7 @@ export class ConvertUsdToBtcComponent implements OnInit {
   ngOnInit() {
   }
 
-  onChangeLocale() {}
+  onChangeLocale(e) {}
 
   onUpdateAmout() { }
 

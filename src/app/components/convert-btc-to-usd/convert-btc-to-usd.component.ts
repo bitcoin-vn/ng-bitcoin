@@ -24,11 +24,12 @@ export class ConvertBtcToUsdComponent implements OnInit {
   ngOnInit() {
   }
 
-  onChangeLocale() {}
+  public onChangeLocale(e) {
+  }
 
-  onUpdateAmout() { }
+  public onUpdateAmout() { }
 
-  onCalculator(e) {
+  public onCalculator(e) {
     e.preventDefault();
     // if(!this.state.amount.trim()){
     //     alert("Vui lòng kiểm tra lại số tiền bạn muốn chuyển đổi");
