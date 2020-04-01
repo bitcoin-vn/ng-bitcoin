@@ -748,32 +748,22 @@ export const Cryptos: any[] = [
         label: "TrueUSD",
         value: "TUSD/USDT"
     },
-
-
     {
         label: "Monero",
         value: "XMR/USDT"
-    },
-
-    {
-        label: "TRON",
-        value: "TRX/USDT"
     },
     {
         label: "VeChain",
         value: "VET/USDT"
     },
-
     {
         label: "Paxos Standard",
         value: "PAX/USDT"
     },
-
     {
         label: "Zcash",
         value: "ZEC/USDT"
     },
-
     {
         label: "Stellar",
         value: "XLM/USDT"
