@@ -725,3 +725,80 @@ footer {
   position: relative;
   height: 40px !important
 }
+
+// ng-prime
+p-dropdown .ui-inputtext {
+  color: rgb(192, 187, 178);
+  background-image: initial;
+  background-color: rgb(33, 34, 34);
+}
+
+p-dropdown .ui-dropdown:not(.ui-state-disabled) {
+  border-top-color: rgb(93, 92, 89);
+  border-right-color: rgb(93, 92, 89);
+  border-bottom-color: rgb(93, 92, 89);
+  border-left-color: rgb(93, 92, 89);
+  &:hover {
+    border-top-color: rgb(93, 92, 89);
+    border-right-color: rgb(93, 92, 89);
+    border-bottom-color: rgb(93, 92, 89);
+    border-left-color: rgb(93, 92, 89);
+  }
+}
+
+p-dropdown .ui-dropdown {
+  background-image: initial;
+  background-color: rgb(33, 34, 34);
+  .ui-dropdown-trigger {
+    background-color: rgb(33, 34, 34);
+    color: rgb(169, 163, 151);
+  }
+}
+
+p-dropdown {
+  .ui-helper-clearfix:hover {
+    background-color: unset !important;
+  }
+  .cdk-virtual-scroll-viewport::-webkit-scrollbar-thumb {
+    background-color: #686868;
+  }
+  .ui-dropdown-panel {
+    border-top-color: rgb(65, 64, 63);
+    border-right-color: rgb(65, 64, 63);
+    border-bottom-color: rgb(65, 64, 63);
+    border-left-color: rgb(65, 64, 63);
+    background-color: rgb(33, 34, 34);
+    box-shadow: rgba(13, 13, 13, 0.16) 0px 3px 6px 0px;
+    .ui-dropdown-filter-container {
+      border-bottom-color: rgb(59, 58, 57);
+      color: rgb(192, 187, 178);
+      background-color: rgb(33, 34, 34);
+    }
+    .ui-dropdown-items {
+      .ui-dropdown-item:not(.ui-state-highlight):not(.ui-state-disabled):hover,
+      body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group:not(.ui-state-highlight):not(.ui-state-disabled):hover {
+        color: rgb(192, 187, 178);
+        background-color: rgb(39, 39, 39);
+      }
+      .ui-dropdown-item.ui-state-highlight,
+      body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group.ui-state-highlight {
+        color: #ffffff;
+        background-color: #686868;
+      }
+      .ui-dropdown-item,
+      .ui-dropdown-item-group {
+        color: #9E9E9E;
+      }
+      .ui-dropdown-item {
+        &:not(.ui-state-highlight):not(.ui-state-disabled):hover,
+        body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group:not(.ui-state-highlight):not(.ui-state-disabled):hover {
+          color: #662B2B;
+          background-color: #272727;
+        }
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    background-color: #4F4F4F;
+  }
+}
