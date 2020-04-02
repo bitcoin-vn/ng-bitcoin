@@ -799,6 +799,86 @@ p-dropdown {
     }
   }
   ::-webkit-scrollbar {
-    background-color: #4F4F4F;
+    background-color: rgb(59, 58, 57) !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(192, 187, 178) !important;
+  }
+}
+
+p-multiselect {
+  ::-webkit-scrollbar {
+    background-color: rgb(59, 58, 57) !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(192, 187, 178) !important;
+  }
+  .ui-multiselect {
+    background-image: initial;
+    background-color: rgb(33, 34, 34);
+    border-top-color: rgb(71, 70, 68);
+    border-right-color: rgb(71, 70, 68);
+    border-bottom-color: rgb(71, 70, 68);
+    border-left-color: rgb(71, 70, 68);
+    .ui-multiselect-label {
+      color: rgb(192, 187, 178);
+    }
+    &:not(.ui-state-disabled):hover {
+      border-color: rgb(71, 70, 68);
+    }
+    .ui-multiselect-trigger {
+      background-color: unset; // mui ten ben phai
+    }
+  }
+  .ui-multiselect-panel {
+    border-top-color: rgb(65, 64, 63);
+    border-right-color: rgb(65, 64, 63);
+    border-bottom-color: rgb(65, 64, 63);
+    border-left-color: rgb(65, 64, 63);
+    background-color: rgb(33, 34, 34);
+    box-shadow: rgba(13, 13, 13, 0.16) 0px 3px 6px 0px;
+    .ui-multiselect-header {
+      border-bottom-color: rgb(59, 58, 57);
+      color: rgb(192, 187, 178);
+      background-color: rgb(33, 34, 34);
+    }
+    .ui-multiselect-header {
+      border-bottom-color: rgb(90, 88, 84);
+      color: rgb(174, 168, 157);
+      background-color: rgb(40, 41, 41);
+    }
+    .ui-multiselect-items {
+      .ui-multiselect-item {
+        border-top-color: initial;
+        border-right-color: initial;
+        border-bottom-color: initial;
+        border-left-color: initial;
+        color: rgb(192, 187, 178);
+        background-color: transparent;
+      }
+      .ui-multiselect-item.ui-state-highlight {
+        color: #ffffff;
+        background-color: #3F3F3F;
+      }
+      .ui-multiselect-item:not(.ui-state-highlight):not(.ui-state-disabled):hover {
+        color: rgb(192, 187, 178);
+        background-color: rgb(39, 39, 39);
+      }
+    }
+  }
+  .ui-chkbox {
+    .ui-chkbox-box {
+      border-top-color: rgb(71, 70, 68);
+      border-right-color: rgb(71, 70, 68);
+      border-bottom-color: rgb(71, 70, 68);
+      border-left-color: rgb(71, 70, 68);
+      background-color: rgb(33, 34, 34);
+    }
+    .ui-chkbox-box:not(.ui-state-disabled):hover {
+      border-top-color: rgb(93, 92, 89);
+      border-right-color: rgb(93, 92, 89);
+      border-bottom-color: rgb(93, 92, 89);
+      border-left-color: rgb(93, 92, 89);
+    }
   }
 }
