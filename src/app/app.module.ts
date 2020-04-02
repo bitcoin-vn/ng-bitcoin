@@ -28,6 +28,9 @@ import { QRCodeModule } from 'angularx-qrcode';
 // primeng
 import { DropdownModule } from 'primeng/dropdown';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { BitcoinPaperWalletComponent } from './components/bitcoin-paper-wallet/bitcoin-paper-wallet.component';
+import { BitcoinAgeDistributionComponent } from './components/bitcoin-age-distribution/bitcoin-age-distribution.component';
+import { BitcoinQRCodeComponent } from './components/bitcoin-qrcode/bitcoin-qrcode.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
     MusicComponent,
     NavigationComponent,
     FooterComponent,
+    BitcoinPaperWalletComponent,
+    BitcoinAgeDistributionComponent,
+    BitcoinQRCodeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,10 @@
-<section class="pt-4">
+<section>
+  <!-- TradingView Widget END -->
+  <div id="widget-cryptoprices-fix" [hidden]="!flags.showTicketTab"></div>
+  <div id="widget-cryptoprices" [hidden]="!flags.showTicket"></div>
+  <!-- TradingView Widget END -->
+
+  <br/>
   <div class="shadow col-md-8 d-block m-auto bg-convert">
     <div class="p-4">
       <h2>Convert USD to BTC</h2>
@@ -36,7 +42,12 @@
       </form>
     </div>
   </div>
-  <app-menu-right (onChangeLocale)="onChangeLocale($event)">
+  <app-menu-right 
+    (onChangeLocale)="onChangeLocale($event)" 
+    (onChangeTicket)="onChangeTicket($event)"
+    (onChangeTicketTab)="onChangeTicketTab($event)"
+    (onChangeTickerChecked)="this.flags.showTicket = $event; onChangeTickerChecked()"
+    (onChangeTickerTabChecked)="this.flags.showTicketTab = $event; onChangeTickerChecked()">
   </app-menu-right>
 </section>
 <footer>

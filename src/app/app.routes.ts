@@ -13,6 +13,9 @@ import { ConvertUsdToBtcComponent } from "src/app/components/convert-usd-to-btc/
 import { CryptocurrencyComponent } from "src/app/components/cryptocurrency/cryptocurrency.component";
 import { GoogleTrendsComponent } from "src/app/components/google-trends/google-trends.component";
 import { MyNotesComponent } from "src/app/components/my-notes/my-notes.component";
+import { BitcoinAgeDistributionComponent } from "src/app/components/bitcoin-age-distribution/bitcoin-age-distribution.component";
+import { BitcoinPaperWalletComponent } from "src/app/components/bitcoin-paper-wallet/bitcoin-paper-wallet.component";
+import { BitcoinQRCodeComponent } from "src/app/components/bitcoin-qrcode/bitcoin-qrcode.component";
 
 
 const routes: Routes = [
@@ -53,6 +56,15 @@ const routes: Routes = [
       }, {
         path: 'notes',
         component: MyNotesComponent
+      }, {
+        path: 'bitcoin-age-distribution',
+        component: BitcoinAgeDistributionComponent
+      }, {
+        path: 'bitcoin-paper-wallet',
+        component: BitcoinPaperWalletComponent
+      }, {
+        path: 'bitcoin-qrcode',
+        component: BitcoinQRCodeComponent
       }
     ]
   }, {

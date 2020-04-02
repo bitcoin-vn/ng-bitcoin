@@ -46,17 +46,17 @@ export const Menu = [
     },
     {
         name: 'Bitcoin QR Code',
-        path: '/btc-qr-code',
+        path: '/bitcoin-qrcode',
         target: ''
     },
     {
         name: 'Bitcoin Paper Wallet',
-        path: '/btc-cards',
+        path: '/bitcoin-paper-wallet',
         target: ''
     },
     {
         name: 'Bitcoin Age Distribution',
-        path: '/age-distribution',
+        path: '/bitcoin-age-distribution',
         target: ''
     },
     {
@@ -88,5 +88,5 @@ export const Menu = [
         name: 'Fiahub Register',
         path: 'https://www.fiahub.com?referral=FD40DFD311',
         target: 'blank'
-    },
+    }
 ]

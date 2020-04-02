@@ -1,7 +1,13 @@
-<section class="pt-4">
+<section>
+  <!-- TradingView Widget END -->
+  <div id="widget-cryptoprices-fix" [hidden]="!flags.showTicketTab"></div>
+  <div id="widget-cryptoprices" [hidden]="!flags.showTicket"></div>
+  <!-- TradingView Widget END -->
+
+  <br/>
   <div class="shadow col-md-8 d-block m-auto bg-convert">
     <div class="p-4">
-      <h2>Convert BTC to USD</h2>
+      <h2>Convert BTC to Altcoin</h2>
 
       <form>
         <div class="row mt-3 mb-3">
@@ -18,11 +24,11 @@
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="deposit">Dolar: <span class="text-warning">Rate</span></label>
+              <label for="deposit">Altcoin: <span class="text-warning">Rate</span></label>
               <div class="input-group">
                 <input class="form-control border-green" type="text" value="" />
                 <div class="input-group-append">
-                  <span class="input-group-text">USD</span>
+                  <span class="input-group-text">ALT</span>
                 </div>
               </div>
             </div>
@@ -36,7 +42,12 @@
       </form>
     </div>
   </div>
-  <app-menu-right (onChangeLocale)="onChangeLocale($event)">
+  <app-menu-right 
+    (onChangeLocale)="onChangeLocale($event)" 
+    (onChangeTicket)="onChangeTicket($event)"
+    (onChangeTicketTab)="onChangeTicketTab($event)"
+    (onChangeTickerChecked)="this.flags.showTicket = $event; onChangeTickerChecked()"
+    (onChangeTickerTabChecked)="this.flags.showTicketTab = $event; onChangeTickerChecked()">
   </app-menu-right>
 </section>
 <footer>
