@@ -1,7 +1,7 @@
 // 1. import dependencies
 import { Renderer2, Inject, Component, OnInit, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
-import { configWidgetPrice, configWidgetChart, configWidgetPriceFix } from "../../components/config-chart/data-display";
+import { configWidgetPrice, configWidgetChart, configWidgetPriceFix, Indicators } from "../../components/config-chart/data-display";
 declare const TradingView: any;
 
 @Component({
@@ -18,6 +18,8 @@ export class ChartsComponent implements OnInit, AfterViewInit {
     showTicket: true,
     heightChart: 84
   };
+  public indicators: any[] = Indicators;
+  public selectedIndicators: any;
 
   public onChangeLocale(e): void {
     this.ngAfterViewInit();
@@ -29,6 +31,10 @@ export class ChartsComponent implements OnInit, AfterViewInit {
 
   public onChangeTicket(e): void {
     this.initialTicket();
+  }
+
+  public onChangeTicketTab(e): void {
+    this.initialTicketTab();
   }
 
   public onChangeTickerChecked(): void {
@@ -43,6 +49,13 @@ export class ChartsComponent implements OnInit, AfterViewInit {
     }
   }
 
+  public onIndicator(e): void {
+    this.selectedIndicators = e.value;
+    const data = JSON.stringify(e.value.map(m => ({ id: m })));
+    localStorage.setItem('indicator_btc_vn', data);
+    this.initialChart();
+  }
+
   // 2. pass then in constructor
   constructor(
     private renderer2: Renderer2,
@@ -50,6 +63,7 @@ export class ChartsComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
+    this.initialIndiactor();
   }
 
   ngAfterViewInit() {
@@ -61,6 +75,7 @@ export class ChartsComponent implements OnInit, AfterViewInit {
 
   private initialTicketTab(): void {
     document.getElementById("widget-cryptoprices-fix").innerHTML = '';
+    configWidgetPriceFix.symbols = JSON.parse(localStorage.getItem('ticket_tab_btc_vn'));
     const pricesFix = {
       id: 'widget-cryptoprices-fix',
       link: 'https://s3.tradingview.com/external-embedding/embed-widget-tickers.js',
@@ -81,6 +96,7 @@ export class ChartsComponent implements OnInit, AfterViewInit {
   }
 
   private initialChart(): void {
+    configWidgetChart.config.studies = JSON.parse(localStorage.getItem('indicator_btc_vn'));
     configWidgetChart.config.symbol = `BINANCE:${localStorage.getItem('symbol_btc_vn').replace('/', '')}`;
     new TradingView.widget(configWidgetChart.config);
   }
@@ -100,4 +116,13 @@ export class ChartsComponent implements OnInit, AfterViewInit {
     configWidgetPrice.locale = e ? e : l;
   }
 
+  private initialIndiactor(): void {
+    const indicatorActive = localStorage.getItem('indicator_btc_vn');
+    if (indicatorActive === undefined || indicatorActive === null) {
+      this.selectedIndicators = configWidgetChart.config.studies.map(m => (m.id));
+      localStorage.setItem('indicator_btc_vn', JSON.stringify(configWidgetChart.config.studies));
+    } else {
+      this.selectedIndicators = JSON.parse(indicatorActive).map(e => (e.id));
+    }
+  }
 }

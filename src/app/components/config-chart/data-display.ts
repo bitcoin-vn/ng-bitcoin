@@ -13,12 +13,12 @@ export const configWidgetPriceFix = {
             "proName": "BINANCE:BCHUSDT"
         },
         {
-            "description": "XRP/USDT",
-            "proName": "BINANCE:XRPUSDT"
-        },
-        {
             "description": "TRX/USDT",
             "proName": "BINANCE:TRXUSDT"
+        },
+        {
+            "description": "XRP/USDT",
+            "proName": "BINANCE:XRPUSDT"
         },
         {
             "description": "TRX/XRP",
@@ -47,6 +47,10 @@ export const configWidgetPrice = {
         {
             "title": "ETC/USDT",
             "proName": "BINANCE:ETCUSDT"
+        },
+        {
+            "title": "USD/VND",
+            "proName": "FX_IDC:USDVND"
         }
     ],
     "colorTheme": "dark",
@@ -657,7 +661,34 @@ export const Cryptos: any[] = [
         label: "XRP",
         value: "XRP/USDT"
     },
-
+    {
+        label: "TRON",
+        value: "TRX/USDT"
+    },
+    {
+        label: "WazirX",
+        value: "WRX/USDT"
+    },
+    {
+        label: "Stellar",
+        value: "XLM/USDT"
+    },
+    {
+        label: "Monero",
+        value: "XMR/USDT"
+    },
+    {
+        label: "EOS",
+        value: "EOS/USDT"
+    },
+    {
+        label: "Cardano",
+        value: "ADA/USDT"
+    },
+    {
+        label: "Dash",
+        value: "DASH/USDT"
+    },
     {
         label: "Binance Coin",
         value: "BNB/USDT"
@@ -665,10 +696,6 @@ export const Cryptos: any[] = [
     {
         label: "Litecoin",
         value: "LTC/USDT"
-    },
-    {
-        label: "EOS",
-        value: "EOS/USDT"
     },
     {
         label: "Bitcoin",
@@ -683,25 +710,8 @@ export const Cryptos: any[] = [
         value: "BUSD/USDT"
     },
     {
-        label: "Litecoin",
-        value: "LTC/USDT"
-    },
-    {
-        label: "Chainlink",
-        value: "LINK/USDT"
-    },
-    {
-        label: "EOS",
-        value: "EOS/USDT"
-    },
-
-    {
         label: "Ethereum Classic",
         value: "ETC/USDT"
-    },
-    {
-        label: "Binance Coin",
-        value: "BNB/USDT"
     },
     {
         label: "Bitcoin",
@@ -712,45 +722,12 @@ export const Cryptos: any[] = [
         value: "XTZ/USDT"
     },
     {
-        label: "Dash",
-        value: "DASH/USDT"
-    },
-    {
-        label: "Tezos",
-        value: "XTZ/USDT"
-    },
-
-    {
-        label: "Ethereum Classic",
-        value: "ETC/USDT"
-    },
-    {
-        label: "Dash",
-        value: "DASH/USDT"
-    },
-    {
         label: "USD Coin",
         value: "USDC/USDT"
     },
     {
-        label: "Monero",
-        value: "XMR/USDT"
-    },
-    {
-        label: "TRON",
-        value: "TRX/USDT"
-    },
-    {
-        label: "Cardano",
-        value: "ADA/USDT"
-    },
-    {
         label: "TrueUSD",
         value: "TUSD/USDT"
-    },
-    {
-        label: "Monero",
-        value: "XMR/USDT"
     },
     {
         label: "VeChain",
@@ -765,38 +742,12 @@ export const Cryptos: any[] = [
         value: "ZEC/USDT"
     },
     {
-        label: "Stellar",
-        value: "XLM/USDT"
-    },
-    {
         label: "Neo",
         value: "NEO/USDT"
-    },
-    {
-        label: "Cardano",
-        value: "ADA/USDT"
     },
     {
         label: "Matic Network",
         value: "MATIC/USDT"
-    },
-
-    {
-        label: "Neo",
-        value: "NEO/USDT"
-    },
-    {
-        label: "Zcash",
-        value: "ZEC/USDT"
-    },
-
-    {
-        label: "WazirX",
-        value: "WRX/USDT"
-    },
-    {
-        label: "Stellar",
-        value: "XLM/USDT"
     },
     {
         label: "Ethereum",
@@ -811,14 +762,9 @@ export const Cryptos: any[] = [
         value: "ETH/BUSD"
     },
     {
-        label: "Cosmos",
-        value: "ATOM/USDT"
-    },
-    {
         label: "Ethereum",
         value: "ETH/TUSD"
     },
-
     {
         label: "Cortex",
         value: "CTXC/USDT"
@@ -836,27 +782,12 @@ export const Cryptos: any[] = [
         value: "QTUM/USDT"
     },
     {
-        label: "VeChain",
-        value: "VET/USDT"
-    },
-
-    {
-        label: "Ontology",
-        value: "ONT/USDT"
-    },
-
-    {
         label: "Elrond",
         value: "ERD/USDT"
     },
     {
         label: "Metal",
         value: "MTL/USDT"
-    },
-
-    {
-        label: "Basic Attention",
-        value: "BAT/USDT"
     },
     {
         label: "IOST",
@@ -866,18 +797,14 @@ export const Cryptos: any[] = [
         label: "Hedera Hashgraph",
         value: "HBAR/USDT"
     },
-
     {
         label: "BitTorrent",
         value: "BTT/USDT"
     },
-
-
     {
         label: "Litecoin",
         value: "LTC/USDC"
     },
-
     {
         label: "Ontology",
         value: "ONT/USDT"
@@ -2166,12 +2093,253 @@ export const Cryptos: any[] = [
     }
 ];
 
-// configWidgetPrice.symbols = [];
-// Cryptos.forEach(e => {
-//     configWidgetPrice.symbols.push(
-//         {
-//             "description": e.value.replace('/', ""),
-//             "proName": `BINANCE:${e.value.replace('/', "")}`
-//         }
-//     );
-// });
+export const Indicators = [
+    {
+        "value": "ACCD@tv-basicstudies",
+        "label": "Accumulation/Distribution"
+    },
+    {
+        "value": "studyADR@tv-basicstudies",
+        "label": "ADR"
+    },
+    {
+        "value": "AROON@tv-basicstudies",
+        "label": "Aroon"
+    },
+    {
+        "value": "ATR@tv-basicstudies",
+        "label": "Average True Range"
+    },
+    {
+        "value": "AwesomeOscillator@tv-basicstudies",
+        "label": "Awesome Oscillator"
+    },
+    {
+        "value": "BB@tv-basicstudies",
+        "label": "Bollinger Bands"
+    },
+    {
+        "value": "BollingerBandsR@tv-basicstudies",
+        "label": "Bollinger Bands %B"
+    },
+    {
+        "value": "BollingerBandsWidth@tv-basicstudies",
+        "label": "Bollinger Bands Width"
+    },
+    {
+        "value": "CMF@tv-basicstudies",
+        "label": "Chaikin Money Flow"
+    },
+    {
+        "value": "ChaikinOscillator@tv-basicstudies",
+        "label": "Chaikin Oscillator"
+    },
+    {
+        "value": "chandeMO@tv-basicstudies",
+        "label": "Chande Momentum Oscillator"
+    },
+    {
+        "value": "ChoppinessIndex@tv-basicstudies",
+        "label": "Choppiness Index"
+    },
+    {
+        "value": "CCI@tv-basicstudies",
+        "label": "Commodity Channel Index"
+    },
+    {
+        "value": "CRSI@tv-basicstudies",
+        "label": "ConnorsRSI"
+    },
+    {
+        "value": "CorrelationCoefficient@tv-basicstudies",
+        "label": "Correlation Coefficient"
+    },
+    {
+        "value": "DetrendedPriceOscillator@tv-basicstudies",
+        "label": "Detrended Price Oscillator"
+    },
+    {
+        "value": "DM@tv-basicstudies",
+        "label": "Directional Movement"
+    },
+    {
+        "value": "DONCH@tv-basicstudies",
+        "label": "Donchian Channels"
+    },
+    {
+        "value": "DoubleEMA@tv-basicstudies",
+        "label": "Double EMA"
+    },
+    {
+        "value": "EaseOfMovement@tv-basicstudies",
+        "label": "Ease Of Movement"
+    },
+    {
+        "value": "EFI@tv-basicstudies",
+        "label": "Elder's Force Index"
+    },
+    {
+        "value": "ElliottWave@tv-basicstudies",
+        "label": "Elliott Wave"
+    },
+    {
+        "value": "ENV@tv-basicstudies",
+        "label": "Envelope"
+    },
+    {
+        "value": "FisherTransform@tv-basicstudies",
+        "label": "Fisher Transform"
+    },
+    {
+        "value": "HV@tv-basicstudies",
+        "label": "Historical Volatility"
+    },
+    {
+        "value": "hullMA@tv-basicstudies",
+        "label": "Hull Moving Average"
+    },
+    {
+        "value": "IchimokuCloud@tv-basicstudies",
+        "label": "Ichimoku Cloud"
+    },
+    {
+        "value": "KLTNR@tv-basicstudies",
+        "label": "Keltner Channels"
+    },
+    {
+        "value": "KST@tv-basicstudies",
+        "label": "Know Sure Thing"
+    },
+    {
+        "value": "LinearRegression@tv-basicstudies",
+        "label": "Linear Regression"
+    },
+    {
+        "value": "MACD@tv-basicstudies",
+        "label": "MACD"
+    },
+    {
+        "value": "MOM@tv-basicstudies",
+        "label": "Momentum"
+    },
+    {
+        "value": "MF@tv-basicstudies",
+        "label": "Money Flow"
+    },
+    {
+        "value": "MoonPhases@tv-basicstudies",
+        "label": "Moon Phases"
+    },
+    {
+        "value": "MASimple@tv-basicstudies",
+        "label": "Moving Average"
+    },
+    {
+        "value": "MAExp@tv-basicstudies",
+        "label": "Moving Average Exponentional"
+    },
+    {
+        "value": "MAWeighted@tv-basicstudies",
+        "label": "Moving Average Weighted"
+    },
+    {
+        "value": "OBV@tv-basicstudies",
+        "label": "On Balance Volume"
+    },
+    {
+        "value": "PSAR@tv-basicstudies",
+        "label": "Parabolic SAR"
+    },
+    {
+        "value": "PivotPointsHighLow@tv-basicstudies",
+        "label": "Pivot Points High Low"
+    },
+    {
+        "value": "PivotPointsStandard@tv-basicstudies",
+        "label": "Pivot Points Standard"
+    },
+    {
+        "value": "PriceOsc@tv-basicstudies",
+        "label": "Price Oscillator"
+    },
+    {
+        "value": "PriceVolumeTrend@tv-basicstudies",
+        "label": "Price Volume Trend"
+    },
+    {
+        "value": "ROC@tv-basicstudies",
+        "label": "Rate Of Change"
+    },
+    {
+        "value": "RSI@tv-basicstudies",
+        "label": "Relative Strength Index"
+    },
+    {
+        "value": "VigorIndex@tv-basicstudies",
+        "label": "Relative Vigor Index"
+    },
+    {
+        "value": "VolatilityIndex@tv-basicstudies",
+        "label": "Relative Volatility Index"
+    },
+    {
+        "value": "SMIErgodicIndicator@tv-basicstudies",
+        "label": "SMI Ergodic Indicator"
+    },
+    {
+        "value": "SMIErgodicOscillator@tv-basicstudies",
+        "label": "SMI Ergodic Oscillator"
+    },
+    {
+        "value": "Stochastic@tv-basicstudies",
+        "label": "Stochastic"
+    },
+    {
+        "value": "StochasticRSI@tv-basicstudies",
+        "label": "Stochastic RSI"
+    },
+    {
+        "value": "TripleEMA@tv-basicstudies",
+        "label": "Triple EMA"
+    },
+    {
+        "value": "Trix@tv-basicstudies",
+        "label": "TRIX"
+    },
+    {
+        "value": "UltimateOsc@tv-basicstudies",
+        "label": "Ultimate Oscillator"
+    },
+    {
+        "value": "VSTOP@tv-basicstudies",
+        "label": "Volatility Stop"
+    },
+    {
+        "value": "Volume@tv-basicstudies",
+        "label": "Volume"
+    },
+    {
+        "value": "VWAP@tv-basicstudies",
+        "label": "VWAP"
+    },
+    {
+        "value": "MAVolumeWeighted@tv-basicstudies",
+        "label": "VWMA"
+    },
+    {
+        "value": "WilliamR@tv-basicstudies",
+        "label": "Williams %R"
+    },
+    {
+        "value": "WilliamsAlligator@tv-basicstudies",
+        "label": "Williams Alligator"
+    },
+    {
+        "value": "WilliamsFractal@tv-basicstudies",
+        "label": "Williams Fractal"
+    },
+    {
+        "value": "ZigZag@tv-basicstudies",
+        "label": "Zig Zag"
+    }
+];

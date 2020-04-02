@@ -6,6 +6,8 @@ import { MenuRightComponent } from './components/menu-right/menu-right.component
 import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { BlockUIModule } from 'primeng/blockui';
+import { PanelModule } from 'primeng/panel';
 
 @NgModule({
   declarations: [MenuRightComponent],
@@ -14,6 +16,8 @@ import { MultiSelectModule } from 'primeng/multiselect';
     FormsModule,
     DropdownModule,
     InputSwitchModule,
+    BlockUIModule,
+    PanelModule,
     MultiSelectModule
   ],
   exports: [

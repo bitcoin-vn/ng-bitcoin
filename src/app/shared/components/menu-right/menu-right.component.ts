@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { FullLocales, Cryptos, configWidgetPrice } from "../../../components/config-chart/data-display";
+import { FullLocales, Cryptos, configWidgetPrice, configWidgetPriceFix } from "../../../components/config-chart/data-display";
 interface Locale {
   label: string,
   value: string
@@ -25,6 +25,7 @@ export class MenuRightComponent implements OnInit {
   @Output() public onChangeLocale = new EventEmitter();
   @Output() public onChangeSymbol = new EventEmitter();
   @Output() public onChangeTicket = new EventEmitter();
+  @Output() public onChangeTicketTab = new EventEmitter();
   @Output() public onChangeTickerChecked = new EventEmitter();
   @Output() public onChangeTickerTabChecked = new EventEmitter();
 
@@ -40,6 +41,8 @@ export class MenuRightComponent implements OnInit {
 
   public selectedTickets: any[];
   public tickets: any[] = [];
+  public selectedTicketsTab: any[];
+  public ticketsTab: any[] = [];
 
   public onShowHide() {
     this.showHide = !this.showHide
@@ -65,12 +68,23 @@ export class MenuRightComponent implements OnInit {
     this.onChangeTicket.emit(e);
   }
 
+  public onTicketTab(e) {
+    this.selectedTicketsTab = e.value;
+    const data = JSON.stringify(e.value.map(m => ({ description: m, proName: `BINANCE:${m.replace('/', '')}` })));
+    localStorage.setItem('ticket_tab_btc_vn', data);
+    this.onChangeTicketTab.emit(e);
+  }
+
   public onTickerChecked(e): void {
     this.onChangeTickerChecked.emit(e.checked);
   }
 
   public onTickerTabChecked(e): void {
     this.onChangeTickerTabChecked.emit(e.checked);
+  }
+
+  public onReset(): void {
+    localStorage.clear();
   }
 
   constructor() {
@@ -80,6 +94,7 @@ export class MenuRightComponent implements OnInit {
     this.initialLocale();
     this.initialSymbol();
     this.initialTicket();
+    this.initialTicketTab();
   }
 
   private initialLocale(): void {
@@ -111,6 +126,17 @@ export class MenuRightComponent implements OnInit {
       this.selectedTickets = JSON.parse(ticketActive).map(e => (e.title));
     }
     this.tickets = Cryptos.map(f => ({ 'label': f.value, 'value': f.value }));
+  }
+
+  private initialTicketTab(): void {
+    const ticketActive = localStorage.getItem('ticket_tab_btc_vn');
+    if (ticketActive === undefined || ticketActive === null) {
+      this.selectedTicketsTab = configWidgetPriceFix.symbols.map(e => (e.description))
+      localStorage.setItem('ticket_tab_btc_vn', JSON.stringify(configWidgetPriceFix.symbols));
+    } else {
+      this.selectedTicketsTab = JSON.parse(ticketActive).map(e => (e.description));
+    }
+    this.ticketsTab = Cryptos.map(f => ({ 'label': f.value, 'value': f.value }));
   }
 
 }

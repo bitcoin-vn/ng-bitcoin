@@ -27,6 +27,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { QRCodeModule } from 'angularx-qrcode';
 // primeng
 import { DropdownModule } from 'primeng/dropdown';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { DropdownModule } from 'primeng/dropdown';
     SharedModule,
     ModalModule.forRoot(),
     // ngprime
+    MultiSelectModule,
     DropdownModule
   ],
   providers: [],

@@ -8,8 +8,12 @@
     (onChangeLocale)="onChangeLocale($event)" 
     (onChangeSymbol)="onChangeSymbol($event)" 
     (onChangeTicket)="onChangeTicket($event)"
+    (onChangeTicketTab)="onChangeTicketTab($event)"
     (onChangeTickerChecked)="this.flags.showTicket = $event; onChangeTickerChecked()"
     (onChangeTickerTabChecked)="this.flags.showTicketTab = $event; onChangeTickerChecked()">
+    <br/>
+    <span class="mt-4 mb-2 d-block">Indicator - Config</span>
+    <p-multiSelect [options]="this.indicators" (onChange)="onIndicator($event)" [styleClass]="'mb-4'" [(ngModel)]="selectedIndicators" [showToggleAll]="true" [virtualScroll]="true" [itemSize]="34" [filter]="true" [style]="{'width':'91%', 'position':'absolute'}"></p-multiSelect>
   </app-menu-right>
 </section>
 <footer>
