@@ -10,12 +10,10 @@ import { configWidgetPrice, configWidgetCryptocurrency, configWidgetPriceFix } f
 })
 export class CryptocurrencyComponent implements OnInit, AfterViewInit {
 
-  public loadViewDone = false;
-  public selectedCar2: string = 'BTC/USDT';
   public flags: any = {
     showTicketTab: true,
     showTicket: true,
-    heightChart: 84
+    heightChart: 245
   };
 
   public onChangeLocale(e): void {
@@ -32,13 +30,13 @@ export class CryptocurrencyComponent implements OnInit, AfterViewInit {
 
   public onChangeTickerChecked(): void {
     if (this.flags.showTicket && this.flags.showTicketTab) {
-      this.flags.heightChart = 84;
-    } else if (this.flags.showTicket && !this.flags.showTicketTab) {
-      this.flags.heightChart = 93;
+      this.flags.heightChart = 245;
     } else if (!this.flags.showTicket && this.flags.showTicketTab) {
-      this.flags.heightChart = 90;
+      this.flags.heightChart = 199;
+    } else if (this.flags.showTicket && !this.flags.showTicketTab) {
+      this.flags.heightChart = 173;
     } else {
-      this.flags.heightChart = 99;
+      this.flags.heightChart = 126;
     }
   }
 

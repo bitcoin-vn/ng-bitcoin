@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { FullLocales, Cryptos, configWidgetPrice, configWidgetPriceFix } from "../../../components/config-chart/data-display";
+import { FullLocales, Cryptos, configWidgetPrice, configWidgetPriceFix, Indicators, configWidgetChart } from "../../../components/config-chart/data-display";
 interface Locale {
   label: string,
   value: string
@@ -28,16 +28,31 @@ export class MenuRightComponent implements OnInit {
   @Output() public onChangeTicketTab = new EventEmitter();
   @Output() public onChangeTickerChecked = new EventEmitter();
   @Output() public onChangeTickerTabChecked = new EventEmitter();
+  @Output() public onChangeIndicator = new EventEmitter();
+  @Output() public onChangeAnalysis = new EventEmitter();
+
+  @Input() public isSymbol = true;
+  @Input() public isTickerOnOff = true;
+  @Input() public isTicker = true;
+  @Input() public isTickerTape = true;
+  @Input() public isIndicator = true;
+  @Input() public isAnalysis = true;
 
   public showHide = false;
   public piSpinner = 'default';
 
-  public selectedLocale: string = 'vi_VN';
+  public selectedLocale: string;
   public locales: any[] = FullLocales;
-  public selectedSymbol: string = 'BTC/USDT';
+  public selectedSymbol: string;
   public symbol: any[] = Cryptos;
   public isTickerChecked: boolean = true;
   public isTickerTabChecked: boolean = true;
+  public indicators: any[] = Indicators;
+  public selectedIndicators: any;
+  public selectedAnalysis: string;
+  public analysis: any[] = Cryptos;
+  public selectedValueAnalysis = '1';
+
 
   public selectedTickets: any[];
   public tickets: any[] = [];
@@ -83,6 +98,51 @@ export class MenuRightComponent implements OnInit {
     this.onChangeTickerTabChecked.emit(e.checked);
   }
 
+  public onIndicator(e): void {
+    this.selectedIndicators = e.value;
+    const data = JSON.stringify(e.value.map(m => ({ id: m })));
+    localStorage.setItem('indicator_btc_vn', data);
+    this.onChangeIndicator.emit(e.checked);
+  }
+
+  public onAnalysis(e): void {
+    this.selectedValueAnalysis = e;
+    const store = JSON.parse(localStorage.getItem('analysis_btc_vn'));
+    switch (e) {
+      case 1:
+        this.selectedAnalysis = store[0]; // binding
+        break;
+      case 2:
+        this.selectedAnalysis = store[1];; // binding
+        break;
+      case 3:
+        this.selectedAnalysis = store[2]; // binding
+        break;
+      default:
+        break;
+    }
+  }
+
+  public onAnalysisEnd(e): void {
+    const store = JSON.parse(localStorage.getItem('analysis_btc_vn'));
+    let val: any[] = [];
+    switch (this.selectedValueAnalysis) {
+      case '1':
+        val = [e.value, store[1], store[2]];
+        break;
+      case '2':
+        val = [store[0], e.value, store[2]];
+        break;
+      case '3':
+        val = [store[0], store[1], e.value];
+        break;
+      default:
+        break;
+    }
+    localStorage.setItem('analysis_btc_vn', JSON.stringify(val));
+    this.onChangeAnalysis.emit([e, this.selectedValueAnalysis]);
+  }
+
   public onReset(): void {
     localStorage.clear();
   }
@@ -95,6 +155,8 @@ export class MenuRightComponent implements OnInit {
     this.initialSymbol();
     this.initialTicket();
     this.initialTicketTab();
+    this.initialIndiactor();
+    this.initialAnalysis();
   }
 
   private initialLocale(): void {
@@ -111,7 +173,8 @@ export class MenuRightComponent implements OnInit {
   private initialSymbol(): void {
     const localeSymbol = localStorage.getItem('symbol_btc_vn');
     if (localeSymbol === undefined || localeSymbol === null) {
-      localStorage.setItem('symbol_btc_vn', 'BTC/USDT');
+      this.selectedSymbol = 'BTC/USDT';
+      localStorage.setItem('symbol_btc_vn', this.selectedSymbol);
     } else {
       this.selectedSymbol = localeSymbol;
     }
@@ -139,4 +202,24 @@ export class MenuRightComponent implements OnInit {
     this.ticketsTab = Cryptos.map(f => ({ 'label': f.value, 'value': f.value }));
   }
 
+  private initialIndiactor(): void {
+    const indicatorActive = localStorage.getItem('indicator_btc_vn');
+    if (indicatorActive === undefined || indicatorActive === null) {
+      this.selectedIndicators = configWidgetChart.config.studies.map(m => (m.id));
+      localStorage.setItem('indicator_btc_vn', JSON.stringify(configWidgetChart.config.studies));
+    } else {
+      this.selectedIndicators = JSON.parse(indicatorActive).map(e => (e.id));
+    }
+  }
+
+  private initialAnalysis(): void {
+    const localeAnalysis = localStorage.getItem('analysis_btc_vn');
+    if (localeAnalysis === undefined || localeAnalysis === null) {
+      const data = ['BTC/USDT', 'TRX/USDT', 'WRX/USDT'];
+      this.selectedAnalysis = data[0];
+      localStorage.setItem('analysis_btc_vn', JSON.stringify(data));
+    } else {
+      this.selectedAnalysis = JSON.parse(localeAnalysis)[0];
+    }
+  }
 }

@@ -2,18 +2,17 @@
   <!-- TradingView Widget END -->
   <div id="widget-cryptoprices-fix" [hidden]="!flags.showTicketTab"></div>
   <div id="widget-cryptoprices" [hidden]="!flags.showTicket"></div>
-  <div id="widget-chart" [ngStyle]="{'height': flags.heightChart+'%'}"></div>
+  <div id="widget-chart" [ngStyle]="{'height': 'calc(100vh - '+ flags.heightChart + 'px)'}"></div>
   <!-- TradingView Widget END -->
-  <app-menu-right 
+  <app-menu-right
+    [isAnalysis]="false"
     (onChangeLocale)="onChangeLocale($event)" 
     (onChangeSymbol)="onChangeSymbol($event)" 
     (onChangeTicket)="onChangeTicket($event)"
     (onChangeTicketTab)="onChangeTicketTab($event)"
+    (onChangeIndicator)="onChangeIndicator($event)"
     (onChangeTickerChecked)="this.flags.showTicket = $event; onChangeTickerChecked()"
     (onChangeTickerTabChecked)="this.flags.showTicketTab = $event; onChangeTickerChecked()">
-    <br/>
-    <span class="mt-4 mb-2 d-block">Indicator - Config</span>
-    <p-multiSelect [options]="this.indicators" (onChange)="onIndicator($event)" [styleClass]="'mb-4'" [(ngModel)]="selectedIndicators" [showToggleAll]="true" [virtualScroll]="true" [itemSize]="34" [filter]="true" [style]="{'width':'91%', 'position':'absolute'}"></p-multiSelect>
   </app-menu-right>
 </section>
 <footer>

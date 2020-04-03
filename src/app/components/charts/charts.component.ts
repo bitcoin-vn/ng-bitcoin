@@ -1,7 +1,7 @@
 // 1. import dependencies
 import { Renderer2, Inject, Component, OnInit, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
-import { configWidgetPrice, configWidgetChart, configWidgetPriceFix, Indicators } from "../../components/config-chart/data-display";
+import { configWidgetPrice, configWidgetChart, configWidgetPriceFix } from "../../components/config-chart/data-display";
 declare const TradingView: any;
 
 @Component({
@@ -11,15 +11,11 @@ declare const TradingView: any;
 })
 export class ChartsComponent implements OnInit, AfterViewInit {
 
-  public loadViewDone = false;
-  public selectedCar2: string = 'BTC/USDT';
   public flags: any = {
     showTicketTab: true,
     showTicket: true,
-    heightChart: 84
+    heightChart: 245
   };
-  public indicators: any[] = Indicators;
-  public selectedIndicators: any;
 
   public onChangeLocale(e): void {
     this.ngAfterViewInit();
@@ -39,20 +35,17 @@ export class ChartsComponent implements OnInit, AfterViewInit {
 
   public onChangeTickerChecked(): void {
     if (this.flags.showTicket && this.flags.showTicketTab) {
-      this.flags.heightChart = 84;
-    } else if (this.flags.showTicket && !this.flags.showTicketTab) {
-      this.flags.heightChart = 93;
+      this.flags.heightChart = 245;
     } else if (!this.flags.showTicket && this.flags.showTicketTab) {
-      this.flags.heightChart = 90;
+      this.flags.heightChart = 199;
+    } else if (this.flags.showTicket && !this.flags.showTicketTab) {
+      this.flags.heightChart = 173;
     } else {
-      this.flags.heightChart = 99;
+      this.flags.heightChart = 126;
     }
   }
 
-  public onIndicator(e): void {
-    this.selectedIndicators = e.value;
-    const data = JSON.stringify(e.value.map(m => ({ id: m })));
-    localStorage.setItem('indicator_btc_vn', data);
+  public onChangeIndicator(e): void {
     this.initialChart();
   }
 
@@ -63,7 +56,6 @@ export class ChartsComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
-    this.initialIndiactor();
   }
 
   ngAfterViewInit() {
@@ -116,13 +108,4 @@ export class ChartsComponent implements OnInit, AfterViewInit {
     configWidgetPrice.locale = e ? e : l;
   }
 
-  private initialIndiactor(): void {
-    const indicatorActive = localStorage.getItem('indicator_btc_vn');
-    if (indicatorActive === undefined || indicatorActive === null) {
-      this.selectedIndicators = configWidgetChart.config.studies.map(m => (m.id));
-      localStorage.setItem('indicator_btc_vn', JSON.stringify(configWidgetChart.config.studies));
-    } else {
-      this.selectedIndicators = JSON.parse(indicatorActive).map(e => (e.id));
-    }
-  }
 }

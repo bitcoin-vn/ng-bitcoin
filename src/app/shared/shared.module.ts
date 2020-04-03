@@ -8,6 +8,7 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { BlockUIModule } from 'primeng/blockui';
 import { PanelModule } from 'primeng/panel';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [MenuRightComponent],
@@ -18,6 +19,7 @@ import { PanelModule } from 'primeng/panel';
     InputSwitchModule,
     BlockUIModule,
     PanelModule,
+    RadioButtonModule,
     MultiSelectModule
   ],
   exports: [
