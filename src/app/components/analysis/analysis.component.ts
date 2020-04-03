@@ -65,6 +65,7 @@ export class AnalysisComponent implements OnInit, AfterViewInit {
   private setupLocale(e: string = null): void {
     const l = localStorage.getItem('locale_btc_vn');
     configWidgetPrice.locale = e ? e : l;
+    configWidgetAnalysis.config.locale = e ? e : l;
   }
 
   public initialAnalysis(id): void {

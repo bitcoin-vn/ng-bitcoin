@@ -59,14 +59,15 @@ export class CryptocurrencyComponent implements OnInit, AfterViewInit {
   private setupLocale(e: string = null): void {
     const l = localStorage.getItem('locale_btc_vn');
     configWidgetPrice.locale = e ? e : l;
+    configWidgetCryptocurrency.locale = e ? e : l;
   }
 
   private initialCryptoCurrency(): void {
-    const CONFIG2 = JSON.stringify(configWidgetCryptocurrency);
+    document.getElementById("widget-cryptocurrency").innerHTML = '';
     const currency = {
       id: 'widget-cryptocurrency',
       link: 'https://s3.tradingview.com/external-embedding/embed-widget-screener.js',
-      text: CONFIG2
+      text: JSON.stringify(configWidgetCryptocurrency)
     }
     this.renderScript(currency);
   }
