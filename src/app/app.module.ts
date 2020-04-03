@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule }    from '@angular/common/http';
 // Project
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './components/_root';
@@ -21,6 +22,9 @@ import { MusicComponent } from './components/_common/music/music.component';
 import { NavigationComponent } from './components/_common/navigation/navigation.component';
 import { FooterComponent } from './components/_common/footer/footer.component';
 import { SharedModule } from './shared/shared.module';
+import { BitcoinPaperWalletComponent } from './components/bitcoin-paper-wallet/bitcoin-paper-wallet.component';
+import { BitcoinAgeDistributionComponent } from './components/bitcoin-age-distribution/bitcoin-age-distribution.component';
+import { BitcoinQRCodeComponent } from './components/bitcoin-qrcode/bitcoin-qrcode.component';
 // ngx-bootstrap v4
 import { ModalModule } from 'ngx-bootstrap/modal';
 // angularx-qrcode
@@ -28,9 +32,11 @@ import { QRCodeModule } from 'angularx-qrcode';
 // primeng
 import { DropdownModule } from 'primeng/dropdown';
 import { MultiSelectModule } from 'primeng/multiselect';
-import { BitcoinPaperWalletComponent } from './components/bitcoin-paper-wallet/bitcoin-paper-wallet.component';
-import { BitcoinAgeDistributionComponent } from './components/bitcoin-age-distribution/bitcoin-age-distribution.component';
-import { BitcoinQRCodeComponent } from './components/bitcoin-qrcode/bitcoin-qrcode.component';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+// ngx-currency
+import { NgxCurrencyModule } from "ngx-currency";
 
 @NgModule({
   declarations: [
@@ -58,15 +64,23 @@ import { BitcoinQRCodeComponent } from './components/bitcoin-qrcode/bitcoin-qrco
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     AppRoutes,
     QRCodeModule,
     SharedModule,
+    HttpClientModule,
     ModalModule.forRoot(),
     // ngprime
     MultiSelectModule,
-    DropdownModule
+    ButtonModule,
+    DropdownModule,
+    ToastModule,
+    // ngx-currency
+    NgxCurrencyModule
   ],
-  providers: [],
+  providers: [
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

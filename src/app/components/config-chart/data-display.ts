@@ -2089,6 +2089,705 @@ export const Cryptos: any[] = [
     }
 ];
 
+export const CrytoStandard = [
+    {
+        "value": "BTC",
+        "label": "Bitcoin"
+    },
+    {
+        "value": "ETH",
+        "label": "Ethereum"
+    },
+    {
+        "value": "BCH",
+        "label": "Bitcoin Cash"
+    },
+    {
+        "value": "XRP",
+        "label": "XRP"
+    },
+    {
+        "value": "TRX",
+        "label": "TRON"
+    },
+    {
+        "value": "WRX",
+        "label": "WazirX"
+    },
+    {
+        "value": "XLM",
+        "label": "Stellar"
+    },
+    {
+        "value": "XMR",
+        "label": "Monero"
+    },
+    {
+        "value": "EOS",
+        "label": "EOS"
+    },
+    {
+        "value": "ADA",
+        "label": "Cardano"
+    },
+    {
+        "value": "DASH",
+        "label": "Dash"
+    },
+    {
+        "value": "BNB",
+        "label": "Binance Coin"
+    },
+    {
+        "value": "LTC",
+        "label": "Litecoin"
+    },
+    {
+        "value": "LINK",
+        "label": "Chainlink"
+    },
+    {
+        "value": "BUSD",
+        "label": "Binance USD"
+    },
+    {
+        "value": "ETC",
+        "label": "Ethereum Classic"
+    },
+    {
+        "value": "XTZ",
+        "label": "Tezos"
+    },
+    {
+        "value": "USDC",
+        "label": "USD Coin"
+    },
+    {
+        "value": "TUSD",
+        "label": "TrueUSD"
+    },
+    {
+        "value": "VET",
+        "label": "VeChain"
+    },
+    {
+        "value": "PAX",
+        "label": "Paxos Standard"
+    },
+    {
+        "value": "ZEC",
+        "label": "Zcash"
+    },
+    {
+        "value": "NEO",
+        "label": "Neo"
+    },
+    {
+        "value": "MATIC",
+        "label": "Matic Network"
+    },
+    {
+        "value": "ATOM",
+        "label": "Cosmos"
+    },
+    {
+        "value": "CTXC",
+        "label": "Cortex"
+    },
+    {
+        "value": "ALGO",
+        "label": "Algorand"
+    },
+    {
+        "value": "QTUM",
+        "label": "Qtum"
+    },
+    {
+        "value": "ERD",
+        "label": "Elrond"
+    },
+    {
+        "value": "MTL",
+        "label": "Metal"
+    },
+    {
+        "value": "IOST",
+        "label": "IOST"
+    },
+    {
+        "value": "HBAR",
+        "label": "Hedera Hashgraph"
+    },
+    {
+        "value": "BTT",
+        "label": "BitTorrent"
+    },
+    {
+        "value": "ONT",
+        "label": "Ontology"
+    },
+    {
+        "value": "ICX",
+        "label": "ICON"
+    },
+    {
+        "value": "OGN",
+        "label": "Origin Protocol"
+    },
+    {
+        "value": "IOTA",
+        "label": "IOTA"
+    },
+    {
+        "value": "BAT",
+        "label": "Basic Attention Token"
+    },
+    {
+        "value": "FET",
+        "label": "Fetch.ai"
+    },
+    {
+        "value": "RLC",
+        "label": "iExec RLC"
+    },
+    {
+        "value": "WIN",
+        "label": "WINk"
+    },
+    {
+        "value": "DOGE",
+        "label": "Dogecoin"
+    },
+    {
+        "value": "ENJ",
+        "label": "Enjin Coin"
+    },
+    {
+        "value": "WAVES",
+        "label": "Waves"
+    },
+    {
+        "value": "MBL",
+        "label": "MovieBloc"
+    },
+    {
+        "value": "BAND",
+        "label": "Band Protocol"
+    },
+    {
+        "value": "RVN",
+        "label": "Ravencoin"
+    },
+    {
+        "value": "TOMO",
+        "label": "TomoChain"
+    },
+    {
+        "value": "DUSK",
+        "label": "Dusk Network"
+    },
+    {
+        "value": "NULS",
+        "label": "NULS"
+    },
+    {
+        "value": "AION",
+        "label": "Aion"
+    },
+    {
+        "value": "COTI",
+        "label": "COTI"
+    },
+    {
+        "value": "ANKR",
+        "label": "Ankr"
+    },
+    {
+        "value": "ZIL",
+        "label": "Zilliqa"
+    },
+    {
+        "value": "CHZ",
+        "label": "Chiliz"
+    },
+    {
+        "value": "NANO",
+        "label": "Nano"
+    },
+    {
+        "value": "STX",
+        "label": "Blockstack"
+    },
+    {
+        "value": "ZRX",
+        "label": "0x"
+    },
+    {
+        "value": "PERL",
+        "label": "Perlin"
+    },
+    {
+        "value": "KAVA",
+        "label": "Kava"
+    },
+    {
+        "value": "ONE",
+        "label": "Harmony"
+    },
+    {
+        "value": "STPT",
+        "label": "Standard Tokenization Protocol"
+    },
+    {
+        "value": "THETA",
+        "label": "THETA"
+    },
+    {
+        "value": "HOT",
+        "label": "Holo"
+    },
+    {
+        "value": "BEAM",
+        "label": "Beam"
+    },
+    {
+        "value": "REN",
+        "label": "Ren"
+    },
+    {
+        "value": "OMG",
+        "label": "OmiseGO"
+    },
+    {
+        "value": "FTM",
+        "label": "Fantom"
+    },
+    {
+        "value": "FTT",
+        "label": "FTX Token"
+    },
+    {
+        "value": "XZC",
+        "label": "Zcoin"
+    },
+    {
+        "value": "NXS",
+        "label": "Nexus"
+    },
+    {
+        "value": "GXS",
+        "label": "GXChain"
+    },
+    {
+        "value": "ARPA",
+        "label": "ARPA Chain"
+    },
+    {
+        "value": "LTO",
+        "label": "LTO Network"
+    },
+    {
+        "value": "WAN",
+        "label": "Wanchain"
+    },
+    {
+        "value": "DOCK",
+        "label": "Dock"
+    },
+    {
+        "value": "USDT",
+        "label": "Tether"
+    },
+    {
+        "value": "GVT",
+        "label": "Genesis Vision"
+    },
+    {
+        "value": "BCD",
+        "label": "Bitcoin Diamond"
+    },
+    {
+        "value": "ONG",
+        "label": "Ontology Gas"
+    },
+    {
+        "value": "ARDR",
+        "label": "Ardor"
+    },
+    {
+        "value": "KMD",
+        "label": "Komodo"
+    },
+    {
+        "value": "POA",
+        "label": "POA"
+    },
+    {
+        "value": "LEND",
+        "label": "Aave"
+    },
+    {
+        "value": "TROY",
+        "label": "TROY"
+    },
+    {
+        "value": "CELR",
+        "label": "Celer Network"
+    },
+    {
+        "value": "DLT",
+        "label": "Agrello"
+    },
+    {
+        "value": "POLY",
+        "label": "Polymath"
+    },
+    {
+        "value": "SC",
+        "label": "Siacoin"
+    },
+    {
+        "value": "LSK",
+        "label": "Lisk"
+    },
+    {
+        "value": "AMB",
+        "label": "Ambrosus"
+    },
+    {
+        "value": "SNT",
+        "label": "Status"
+    },
+    {
+        "value": "COS",
+        "label": "Contentos"
+    },
+    {
+        "value": "CMT",
+        "label": "CyberMiles"
+    },
+    {
+        "value": "REP",
+        "label": "Augur"
+    },
+    {
+        "value": "MCO",
+        "label": "MCO"
+    },
+    {
+        "value": "KEY",
+        "label": "Selfkey"
+    },
+    {
+        "value": "NPXS",
+        "label": "Pundi X"
+    },
+    {
+        "value": "DENT",
+        "label": "Dent"
+    },
+    {
+        "value": "TNT",
+        "label": "Tierion"
+    },
+    {
+        "value": "QKC",
+        "label": "QuarkChain"
+    },
+    {
+        "value": "PHB",
+        "label": "Red Pulse Phoenix"
+    },
+    {
+        "value": "VIA",
+        "label": "Viacoin"
+    },
+    {
+        "value": "NAS",
+        "label": "Nebulas"
+    },
+    {
+        "value": "NKN",
+        "label": "NKN"
+    },
+    {
+        "value": "BLZ",
+        "label": "Bluzelle"
+    },
+    {
+        "value": "DATA",
+        "label": "Streamr DATAcoin"
+    },
+    {
+        "value": "CVC",
+        "label": "Civic"
+    },
+    {
+        "value": "CND",
+        "label": "Cindicator"
+    },
+    {
+        "value": "SNM",
+        "label": "SONM"
+    },
+    {
+        "value": "ADX",
+        "label": "AdEx"
+    },
+    {
+        "value": "STRAT",
+        "label": "Stratis"
+    },
+    {
+        "value": "SKY",
+        "label": "Skycoin"
+    },
+    {
+        "value": "TFUEL",
+        "label": "Theta Fuel"
+    },
+    {
+        "value": "SNGLS",
+        "label": "SingularDTV"
+    },
+    {
+        "value": "AST",
+        "label": "AirSwap"
+    },
+    {
+        "value": "LRC",
+        "label": "Loopring"
+    },
+    {
+        "value": "RCN",
+        "label": "Ripio Credit Network"
+    },
+    {
+        "value": "MTH",
+        "label": "Monetha"
+    },
+    {
+        "value": "NAV",
+        "label": "NavCoin"
+    },
+    {
+        "value": "REQ",
+        "label": "Request"
+    },
+    {
+        "value": "HC",
+        "label": "HyperCash"
+    },
+    {
+        "value": "QSP",
+        "label": "Quantstamp"
+    },
+    {
+        "value": "GRS",
+        "label": "Groestlcoin"
+    },
+    {
+        "value": "ZEN",
+        "label": "Horizen"
+    },
+    {
+        "value": "DREP",
+        "label": "DREP"
+    },
+    {
+        "value": "GTO",
+        "label": "Gifto"
+    },
+    {
+        "value": "GAS",
+        "label": "Gas"
+    },
+    {
+        "value": "BTS",
+        "label": "BitShares"
+    },
+    {
+        "value": "OST",
+        "label": "OST"
+    },
+    {
+        "value": "TCT",
+        "label": "TokenClub"
+    },
+    {
+        "value": "VIB",
+        "label": "Viberate"
+    },
+    {
+        "value": "MITH",
+        "label": "Mithril"
+    },
+    {
+        "value": "EVX",
+        "label": "Everex"
+    },
+    {
+        "value": "MANA",
+        "label": "Decentraland"
+    },
+    {
+        "value": "STEEM",
+        "label": "Steem"
+    },
+    {
+        "value": "STORM",
+        "label": "Storm"
+    },
+    {
+        "value": "ARN",
+        "label": "Aeron"
+    },
+    {
+        "value": "COCOS",
+        "label": "Cocos-BCX"
+    },
+    {
+        "value": "FUEL",
+        "label": "Etherparty"
+    },
+    {
+        "value": "ENG",
+        "label": "Enigma"
+    },
+    {
+        "value": "KNC",
+        "label": "Kyber Network"
+    },
+    {
+        "value": "APPC",
+        "label": "AppCoins"
+    },
+    {
+        "value": "WPR",
+        "label": "WePower"
+    },
+    {
+        "value": "SYS",
+        "label": "Syscoin"
+    },
+    {
+        "value": "BCPT",
+        "label": "Blockmason Credit Protocol"
+    },
+    {
+        "value": "XEM",
+        "label": "NEM"
+    },
+    {
+        "value": "WTC",
+        "label": "Waltonchain"
+    },
+    {
+        "value": "EDO",
+        "label": "Eidoo"
+    },
+    {
+        "value": "BTG",
+        "label": "Bitcoin Gold"
+    },
+    {
+        "value": "GO",
+        "label": "GoChain"
+    },
+    {
+        "value": "POWR",
+        "label": "Power Ledger"
+    },
+    {
+        "value": "ELF",
+        "label": "aelf"
+    },
+    {
+        "value": "PIVX",
+        "label": "PIVX"
+    },
+    {
+        "value": "CDT",
+        "label": "Blox"
+    },
+    {
+        "value": "BRD",
+        "label": "Bread"
+    },
+    {
+        "value": "XVG",
+        "label": "Verge"
+    },
+    {
+        "value": "YOYO",
+        "label": "YOYOW"
+    },
+    {
+        "value": "AGI",
+        "label": "SingularityNET"
+    },
+    {
+        "value": "VIBE",
+        "label": "VIBE"
+    },
+    {
+        "value": "STORJ",
+        "label": "Storj"
+    },
+    {
+        "value": "AE",
+        "label": "Aeternity"
+    },
+    {
+        "value": "RDN",
+        "label": "Raiden Network Token"
+    },
+    {
+        "value": "WABI",
+        "label": "Tael"
+    },
+    {
+        "value": "MDA",
+        "label": "Moeda Loyalty Points"
+    },
+    {
+        "value": "BQX",
+        "label": "Voyager Token"
+    },
+    {
+        "value": "LUN",
+        "label": "Lunyr"
+    },
+    {
+        "value": "OAX",
+        "label": "OAX"
+    },
+    {
+        "value": "ARK",
+        "label": "Ark"
+    },
+    {
+        "value": "NEBL",
+        "label": "Neblio"
+    },
+    {
+        "value": "LOOM",
+        "label": "Loom Network"
+    },
+    {
+        "value": "DCR",
+        "label": "Decred"
+    },
+    {
+        "value": "PPT",
+        "label": "Populous"
+    },
+    {
+        "value": "POE",
+        "label": "Po.et"
+    }
+];
+
 export const Indicators = [
     {
         "value": "ACCD@tv-basicstudies",
@@ -2339,3 +3038,636 @@ export const Indicators = [
         "label": "Zig Zag"
     }
 ];
+
+export const Fiats = [
+    {
+        "label": "United States dollar",
+        "value": "USD"
+    },
+    {
+        "label": "Russian ruble",
+        "value": "RUB"
+    },
+    {
+        "label": "Afghan afghani",
+        "value": "AFN"
+    },
+    {
+        "label": "Euro",
+        "value": "EUR"
+    },
+    {
+        "label": "Albanian lek",
+        "value": "ALL"
+    },
+    {
+        "label": "British pound[F]",
+        "value": "GBP"
+    },
+    {
+        "label": "Algerian dinar",
+        "value": "DZD"
+    },
+    {
+        "label": "Angolan kwanza",
+        "value": "AOA"
+    },
+    {
+        "label": "Eastern Caribbean dollar",
+        "value": "XCD"
+    },
+    {
+        "label": "Argentine peso",
+        "value": "ARS"
+    },
+    {
+        "label": "Armenian dram",
+        "value": "AMD"
+    },
+    {
+        "label": "Aruban florin",
+        "value": "AWG"
+    },
+    {
+        "label": "Saint Helena pound",
+        "value": "SHP"
+    },
+    {
+        "label": "Australian dollar",
+        "value": "AUD"
+    },
+    {
+        "label": "Azerbaijani manat",
+        "value": "AZN"
+    },
+    {
+        "label": "Bahamian dollar",
+        "value": "BSD"
+    },
+    {
+        "label": "Bahraini dinar",
+        "value": "BHD"
+    },
+    {
+        "label": "Bangladeshi taka",
+        "value": "BDT"
+    },
+    {
+        "label": "Barbadian dollar",
+        "value": "BBD"
+    },
+    {
+        "label": "Belarusian ruble",
+        "value": "BYN"
+    },
+    {
+        "label": "Belize dollar",
+        "value": "BZD"
+    },
+    {
+        "label": "West African CFA franc",
+        "value": "XOF"
+    },
+    {
+        "label": "Bermudian dollar",
+        "value": "BMD"
+    },
+    {
+        "label": "Bhutanese ngultrum",
+        "value": "BTN"
+    },
+    {
+        "label": "Indian rupee",
+        "value": "INR"
+    },
+    {
+        "label": "Bolivian boliviano",
+        "value": "BOB"
+    },
+    {
+        "label": "Bosnia and Herzegovina convertible mark",
+        "value": "BAM"
+    },
+    {
+        "label": "Botswana pula",
+        "value": "BWP"
+    },
+    {
+        "label": "Brazilian real",
+        "value": "BRL"
+    },
+    {
+        "label": "Brunei dollar",
+        "value": "BND"
+    },
+    {
+        "label": "Singapore dollar",
+        "value": "SGD"
+    },
+    {
+        "label": "Bulgarian lev",
+        "value": "BGN"
+    },
+    {
+        "label": "Burundian franc",
+        "value": "BIF"
+    },
+    {
+        "label": "Cambodian riel",
+        "value": "KHR"
+    },
+    {
+        "label": "Central African CFA franc",
+        "value": "XAF"
+    },
+    {
+        "label": "Canadian dollar",
+        "value": "CAD"
+    },
+    {
+        "label": "Cape Verdean escudo",
+        "value": "CVE"
+    },
+    {
+        "label": "Cayman Islands dollar",
+        "value": "KYD"
+    },
+    {
+        "label": "Chilean peso",
+        "value": "CLP"
+    },
+    {
+        "label": "Chinese yuan",
+        "value": "CNY"
+    },
+    {
+        "label": "Colombian peso",
+        "value": "COP"
+    },
+    {
+        "label": "Comorian franc",
+        "value": "KMF"
+    },
+    {
+        "label": "Congolese franc",
+        "value": "CDF"
+    },
+    {
+        "label": "New Zealand dollar",
+        "value": "NZD"
+    },
+    {
+        "label": "Costa Rican colón",
+        "value": "CRC"
+    },
+    {
+        "label": "Croatian kuna",
+        "value": "HRK"
+    },
+    {
+        "label": "Cuban peso",
+        "value": "CUP"
+    },
+    {
+        "label": "Cuban convertible peso",
+        "value": "CUC"
+    },
+    {
+        "label": "Netherlands Antillean guilder",
+        "value": "ANG"
+    },
+    {
+        "label": "Czech koruna",
+        "value": "CZK"
+    },
+    {
+        "label": "Danish krone",
+        "value": "DKK"
+    },
+    {
+        "label": "Djiboutian franc",
+        "value": "DJF"
+    },
+    {
+        "label": "Dominican peso",
+        "value": "DOP"
+    },
+    {
+        "label": "Egyptian pound",
+        "value": "EGP"
+    },
+    {
+        "label": "Eritrean nakfa",
+        "value": "ERN"
+    },
+    {
+        "label": "Swazi lilangeni",
+        "value": "SZL"
+    },
+    {
+        "label": "South African rand",
+        "value": "ZAR"
+    },
+    {
+        "label": "Ethiopian birr",
+        "value": "ETB"
+    },
+    {
+        "label": "Falkland Islands pound",
+        "value": "FKP"
+    },
+    {
+        "label": "Fijian dollar",
+        "value": "FJD"
+    },
+    {
+        "label": "CFP franc",
+        "value": "XPF"
+    },
+    {
+        "label": "Gambian dalasi",
+        "value": "GMD"
+    },
+    {
+        "label": "Georgian lari",
+        "value": "GEL"
+    },
+    {
+        "label": "Ghanaian cedi",
+        "value": "GHS"
+    },
+    {
+        "label": "Gibraltar pound",
+        "value": "GIP"
+    },
+    {
+        "label": "Guatemalan quetzal",
+        "value": "GTQ"
+    },
+    {
+        "label": "Guinean franc",
+        "value": "GNF"
+    },
+    {
+        "label": "Guyanese dollar",
+        "value": "GYD"
+    },
+    {
+        "label": "Haitian gourde",
+        "value": "HTG"
+    },
+    {
+        "label": "Honduran lempira",
+        "value": "HNL"
+    },
+    {
+        "label": "Hong Kong dollar",
+        "value": "HKD"
+    },
+    {
+        "label": "Hungarian forint",
+        "value": "HUF"
+    },
+    {
+        "label": "Icelandic króna",
+        "value": "ISK"
+    },
+    {
+        "label": "Indonesian rupiah",
+        "value": "IDR"
+    },
+    {
+        "label": "Iranian rial",
+        "value": "IRR"
+    },
+    {
+        "label": "Iraqi dinar",
+        "value": "IQD"
+    },
+    {
+        "label": "Israeli new shekel",
+        "value": "ILS"
+    },
+    {
+        "label": "Jamaican dollar",
+        "value": "JMD"
+    },
+    {
+        "label": "Japanese yen",
+        "value": "JPY"
+    },
+    {
+        "label": "Jordanian dinar",
+        "value": "JOD"
+    },
+    {
+        "label": "Kazakhstani tenge",
+        "value": "KZT"
+    },
+    {
+        "label": "Kenyan shilling",
+        "value": "KES"
+    },
+    {
+        "label": "North Korean won",
+        "value": "KPW"
+    },
+    {
+        "label": "South Korean won",
+        "value": "KRW"
+    },
+    {
+        "label": "Kuwaiti dinar",
+        "value": "KWD"
+    },
+    {
+        "label": "Kyrgyzstani som",
+        "value": "KGS"
+    },
+    {
+        "label": "Lao kip",
+        "value": "LAK"
+    },
+    {
+        "label": "Lebanese pound",
+        "value": "LBP"
+    },
+    {
+        "label": "Lesotho loti",
+        "value": "LSL"
+    },
+    {
+        "label": "Liberian dollar",
+        "value": "LRD"
+    },
+    {
+        "label": "Libyan dinar",
+        "value": "LYD"
+    },
+    {
+        "label": "Swiss franc",
+        "value": "CHF"
+    },
+    {
+        "label": "Macanese pataca",
+        "value": "MOP"
+    },
+    {
+        "label": "Malagasy ariary",
+        "value": "MGA"
+    },
+    {
+        "label": "Malawian kwacha",
+        "value": "MWK"
+    },
+    {
+        "label": "Malaysian ringgit",
+        "value": "MYR"
+    },
+    {
+        "label": "Maldivian rufiyaa",
+        "value": "MVR"
+    },
+    {
+        "label": "Mauritanian ouguiya",
+        "value": "MRU"
+    },
+    {
+        "label": "Mauritian rupee",
+        "value": "MUR"
+    },
+    {
+        "label": "Mexican peso",
+        "value": "MXN"
+    },
+    {
+        "label": "Moldovan leu",
+        "value": "MDL"
+    },
+    {
+        "label": "Mongolian tögrög",
+        "value": "MNT"
+    },
+    {
+        "label": "Moroccan dirham",
+        "value": "MAD"
+    },
+    {
+        "label": "Mozambican metical",
+        "value": "MZN"
+    },
+    {
+        "label": "Burmese kyat",
+        "value": "MMK"
+    },
+    {
+        "label": "Namibian dollar",
+        "value": "NAD"
+    },
+    {
+        "label": "Nepalese rupee",
+        "value": "NPR"
+    },
+    {
+        "label": "Nicaraguan córdoba",
+        "value": "NIO"
+    },
+    {
+        "label": "Nigerian naira",
+        "value": "NGN"
+    },
+    {
+        "label": "Macedonian denar",
+        "value": "MKD"
+    },
+    {
+        "label": "Turkish lira",
+        "value": "TRY"
+    },
+    {
+        "label": "Norwegian krone",
+        "value": "NOK"
+    },
+    {
+        "label": "Omani rial",
+        "value": "OMR"
+    },
+    {
+        "label": "Pakistani rupee",
+        "value": "PKR"
+    },
+    {
+        "label": "Panamanian balboa",
+        "value": "PAB"
+    },
+    {
+        "label": "Papua New Guinean kina",
+        "value": "PGK"
+    },
+    {
+        "label": "Paraguayan guaraní",
+        "value": "PYG"
+    },
+    {
+        "label": "Peruvian sol",
+        "value": "PEN"
+    },
+    {
+        "label": "Philippine peso",
+        "value": "PHP"
+    },
+    {
+        "label": "Polish złoty",
+        "value": "PLN"
+    },
+    {
+        "label": "Qatari riyal",
+        "value": "QAR"
+    },
+    {
+        "label": "Romanian leu",
+        "value": "RON"
+    },
+    {
+        "label": "Rwandan franc",
+        "value": "RWF"
+    },
+    {
+        "label": "Samoan tālā",
+        "value": "WST"
+    },
+    {
+        "label": "São Tomé and Príncipe dobra",
+        "value": "STN"
+    },
+    {
+        "label": "Saudi riyal",
+        "value": "SAR"
+    },
+    {
+        "label": "Serbian dinar",
+        "value": "RSD"
+    },
+    {
+        "label": "Seychellois rupee",
+        "value": "SCR"
+    },
+    {
+        "label": "Sierra Leonean leone",
+        "value": "SLL"
+    },
+    {
+        "label": "Solomon Islands dollar",
+        "value": "SBD"
+    },
+    {
+        "label": "Somali shilling",
+        "value": "SOS"
+    },
+    {
+        "label": "South Sudanese pound",
+        "value": "SSP"
+    },
+    {
+        "label": "Sri Lankan rupee",
+        "value": "LKR"
+    },
+    {
+        "label": "Sudanese pound",
+        "value": "SDG"
+    },
+    {
+        "label": "Surinamese dollar",
+        "value": "SRD"
+    },
+    {
+        "label": "Swedish krona",
+        "value": "SEK"
+    },
+    {
+        "label": "Syrian pound",
+        "value": "SYP"
+    },
+    {
+        "label": "New Taiwan dollar",
+        "value": "TWD"
+    },
+    {
+        "label": "Tajikistani somoni",
+        "value": "TJS"
+    },
+    {
+        "label": "Tanzanian shilling",
+        "value": "TZS"
+    },
+    {
+        "label": "Thai baht",
+        "value": "THB"
+    },
+    {
+        "label": "Tongan paʻanga[P]",
+        "value": "TOP"
+    },
+    {
+        "label": "Trinidad and Tobago dollar",
+        "value": "TTD"
+    },
+    {
+        "label": "Tunisian dinar",
+        "value": "TND"
+    },
+    {
+        "label": "Turkmenistan manat",
+        "value": "TMT"
+    },
+    {
+        "label": "Ugandan shilling",
+        "value": "UGX"
+    },
+    {
+        "label": "Ukrainian hryvnia",
+        "value": "UAH"
+    },
+    {
+        "label": "United Arab Emirates dirham",
+        "value": "AED"
+    },
+    {
+        "label": "Uruguayan peso",
+        "value": "UYU"
+    },
+    {
+        "label": "Uzbekistani soʻm",
+        "value": "UZS"
+    },
+    {
+        "label": "Vanuatu vatu",
+        "value": "VUV"
+    },
+    {
+        "label": "Venezuelan bolívar soberano",
+        "value": "VES"
+    },
+    {
+        "label": "Vietnamese đồng",
+        "value": "VND"
+    },
+    {
+        "label": "Yemeni rial",
+        "value": "YER"
+    },
+    {
+        "label": "Zambian kwacha",
+        "value": "ZMW"
+    }
+]
+
+
+// console.log(Fiats)
+// const test = Fiats.map(e => e['value'])
+//     // store the keys of the unique objects
+//     .map((e, i, final) => final.indexOf(e) === i && i)
+//     // eliminate the dead keys & store unique objects
+//     .filter(e => Fiats[e]).map(e => Fiats[e]);
+// console.log(test);
+// localStorage.setItem('test', JSON.stringify(test));

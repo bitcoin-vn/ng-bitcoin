@@ -1,6 +1,14 @@
 import { Component, OnInit, Inject, Renderer2, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from "@angular/common";
-import { configWidgetPriceFix, configWidgetPrice } from "../../components/config-chart/data-display";
+import { configWidgetPriceFix, configWidgetPrice, Fiats, CrytoStandard } from "../../components/config-chart/data-display";
+import { FormGroup, FormControl } from "@angular/forms";
+import { HttpClient } from "@angular/common/http";
+import { MessageService } from "primeng/api";
+
+interface SelOption {
+  label: string;
+  value: string;
+}
 
 @Component({
   selector: 'app-convert-btc-to-usd',
@@ -8,24 +16,49 @@ import { configWidgetPriceFix, configWidgetPrice } from "../../components/config
   styleUrls: ['./convert-btc-to-usd.component.scss']
 })
 export class ConvertBtcToUsdComponent implements OnInit, AfterViewInit {
-  selectedBtc: any;
-  cars = [
-    { label: 'Audi', value: 'Audi' },
-    { label: 'BMW', value: 'BMW' },
-    { label: 'Fiat', value: 'Fiat' },
-    { label: 'Ford', value: 'Ford' },
-    { label: 'Honda', value: 'Honda' },
-    { label: 'Jaguar', value: 'Jaguar' },
-    { label: 'Mercedes', value: 'Mercedes' },
-    { label: 'Renault', value: 'Renault' },
-    { label: 'VW', value: 'VW' },
-    { label: 'Volvo', value: 'Volvo' }
-  ];
+
+  public fiats = Fiats;
+  public cryptos = CrytoStandard;
+  public selLeftCoin: SelOption = this.cryptos[0];
+  public selRightCoin: SelOption = this.fiats[0];
   public flags: any = {
     showTicketTab: true,
     showTicket: true,
     heightChart: 245
   };
+  public isSubmit: boolean = false;
+  public formGroup: FormGroup;
+
+  public onLeftSelected(e): void {
+    this.selLeftCoin = this.cryptos.filter(f => f.value === e)[0];
+  }
+
+  public onRightSelected(e): void {
+    this.selRightCoin = this.fiats.filter(f => f.value === e)[0];
+  }
+
+  public onCalculate(e): void {
+    e.preventDefault();
+    if (!this.f.currencyL.value) {
+      alert("Please check the amount you want to convert");
+    } else {
+      this.isSubmit = true;
+      var myUrl = `https://min-api.cryptocompare.com/data/price?fsym=${this.selLeftCoin.value}&tsyms=${this.selRightCoin.value}`;
+      this.http.get(myUrl).subscribe((res: any) => {
+        if (res && res.Response === 'Error') {
+          this.messageService.add({ severity: 'error', summary: 'Error Message', detail: res.Message });
+        } else {
+          this.formGroup.setValue({
+            currencyL: this.f.currencyL.value,
+            currencyR: Number(this.f.currencyL.value) * Number(res[`${this.selRightCoin.value}`])
+          });
+        }
+        this.isSubmit = false;
+      }, error => {
+        this.messageService.add({ severity: 'error', summary: 'Error Message', detail: 'Validation failed' });
+      })
+    }
+  }
 
   public onChangeLocale(e): void {
     this.ngAfterViewInit();
@@ -53,27 +86,14 @@ export class ConvertBtcToUsdComponent implements OnInit, AfterViewInit {
 
   // 2. pass then in constructor
   constructor(
+    private http: HttpClient,
     private renderer2: Renderer2,
+    private messageService: MessageService,
     @Inject(DOCUMENT) private document
   ) { }
 
   ngOnInit() {
-  }
-
-  onUpdateAmout() { }
-
-  onCalculator(e) {
-    e.preventDefault();
-    // if(!this.state.amount.trim()){
-    //     alert("Vui lòng kiểm tra lại số tiền bạn muốn chuyển đổi");
-    // } else {
-    //     var myUrl = 'https://api.cryptonator.com/api/ticker/btc-usd';
-    //     axios.get(myUrl)
-    //     .then(res => {
-    //         this.setState({output: this.moneyFormat(this.state.amount * res.data.ticker.price, "USD")});
-    //         this.setState({rate:  this.moneyFormat(res.data.ticker.price,'USD')});
-    //     })
-    // }
+    this.validate();
   }
 
   ngAfterViewInit() {
@@ -81,6 +101,15 @@ export class ConvertBtcToUsdComponent implements OnInit, AfterViewInit {
     this.initialTicketTab();
     this.initialTicket();
   }
+
+  public validate(): void {
+    this.formGroup = new FormGroup({
+      currencyL: new FormControl(),
+      currencyR: new FormControl()
+    })
+  }
+
+  get f() { return this.formGroup.controls }
 
   private setupLocale(e: string = null): void {
     const l = localStorage.getItem('locale_btc_vn');
