@@ -65,11 +65,6 @@ export const Menu = [
         target: 'blank'
     },
     {
-        name: 'Exchanges',
-        path: 'https://coin360.com/exchanges',
-        target: 'blank'
-    },
-    {
         name: 'Bitcoin Frees',
         path: 'https://bitcoinfees.earn.com/',
         target: 'blank'
@@ -82,11 +77,6 @@ export const Menu = [
     {
         name: 'Binance Register',
         path: 'https://www.binance.com/vn/markets?ref=37439706',
-        target: 'blank'
-    },
-    {
-        name: 'Fiahub Register',
-        path: 'https://www.fiahub.com?referral=FD40DFD311',
         target: 'blank'
     }
 ]

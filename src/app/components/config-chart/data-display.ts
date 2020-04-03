@@ -5,6 +5,14 @@ export const configWidgetPriceFix = {
             "proName": "BINANCE:BTCUSDT"
         },
         {
+            "description": "ETH/USDT",
+            "proName": "BINANCE:ETHUSDT"
+        },
+        {
+            "description": "BCH/USDT",
+            "proName": "BINANCE:BCHUSDT"
+        },
+        {
             "description": "TRX/USDT",
             "proName": "BINANCE:TRXUSDT"
         },
@@ -20,14 +28,6 @@ export const configWidgetPriceFix = {
 
 export const configWidgetPrice = {
     "symbols": [
-        {
-            "title": "ETH/USDT",
-            "proName": "BINANCE:ETHUSDT"
-        },
-        {
-            "title": "BCH/USDT",
-            "proName": "BINANCE:BCHUSDT"
-        },
         {
             "title": "XRP/USDT",
             "proName": "BINANCE:XRPUSDT"
