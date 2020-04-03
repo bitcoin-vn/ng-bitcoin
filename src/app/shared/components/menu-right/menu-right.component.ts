@@ -51,7 +51,7 @@ export class MenuRightComponent implements OnInit {
   public selectedIndicators: any;
   public selectedAnalysis: string;
   public analysis: any[] = Cryptos;
-  public selectedValueAnalysis = '1';
+  public selectedValueAnalysis = 1;
 
 
   public selectedTickets: any[];
@@ -125,21 +125,23 @@ export class MenuRightComponent implements OnInit {
 
   public onAnalysisEnd(e): void {
     const store = JSON.parse(localStorage.getItem('analysis_btc_vn'));
-    let val: any[] = [];
     switch (this.selectedValueAnalysis) {
-      case '1':
-        val = [e.value, store[1], store[2]];
+      case 1:
+        console.log(`[${e.value}, ${store[1]}, ${store[2]}]`);
+        localStorage.setItem('analysis_btc_vn', JSON.stringify([e.value, store[1], store[2]]));
         break;
-      case '2':
-        val = [store[0], e.value, store[2]];
+      case 2:
+        console.log(`[${store[0]}, ${e.value}, ${store[2]}]`);
+        localStorage.setItem('analysis_btc_vn', JSON.stringify([store[0], e.value, store[2]]));
         break;
-      case '3':
-        val = [store[0], store[1], e.value];
+      case 3:
+        console.log(`[${store[0]}, ${store[1]}, ${e.value}]`);
+        localStorage.setItem('analysis_btc_vn', JSON.stringify([store[0], store[1], e.value]));
         break;
       default:
         break;
     }
-    localStorage.setItem('analysis_btc_vn', JSON.stringify(val));
+
     this.onChangeAnalysis.emit([e, this.selectedValueAnalysis]);
   }
 

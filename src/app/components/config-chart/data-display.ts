@@ -17,12 +17,8 @@ export const configWidgetPriceFix = {
             "proName": "BINANCE:TRXUSDT"
         },
         {
-            "description": "XRP/USDT",
-            "proName": "BINANCE:XRPUSDT"
-        },
-        {
-            "description": "TRX/XRP",
-            "proName": "BINANCE:TRXXRP"
+            "description": "WRX/USDT",
+            "proName": "BINANCE:WRXUSDT"
         }
     ],
     "colorTheme": "dark",
@@ -33,8 +29,8 @@ export const configWidgetPriceFix = {
 export const configWidgetPrice = {
     "symbols": [
         {
-            "title": "BTC/USDT",
-            "proName": "BINANCE:BTCUSDT"
+            "title": "XRP/USDT",
+            "proName": "BINANCE:XRPUSDT"
         },
         {
             "title": "EOS/USDT",

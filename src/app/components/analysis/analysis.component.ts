@@ -57,9 +57,9 @@ export class AnalysisComponent implements OnInit, AfterViewInit {
     this.setupLocale();
     this.initialTicketTab();
     this.initialTicket();
-    this.initialAnalysis('1');
-    this.initialAnalysis('2');
-    this.initialAnalysis('3');
+    this.initialAnalysis(1);
+    this.initialAnalysis(2);
+    this.initialAnalysis(3);
   }
 
   private setupLocale(e: string = null): void {
@@ -70,13 +70,13 @@ export class AnalysisComponent implements OnInit, AfterViewInit {
   public initialAnalysis(id): void {
     const store = JSON.parse(localStorage.getItem('analysis_btc_vn'));
     switch (id) {
-      case '1':
+      case 1:
         configWidgetAnalysis.config.symbol = 'BINANCE:' + store[0].replace('/', '');
         break;
-      case '2':
+      case 2:
         configWidgetAnalysis.config.symbol = 'BINANCE:' + store[1].replace('/', '');
         break;
-      case '3':
+      case 3:
         configWidgetAnalysis.config.symbol = 'BINANCE:' + store[2].replace('/', '');
         break;
       default:
