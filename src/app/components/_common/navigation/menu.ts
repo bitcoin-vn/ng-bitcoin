@@ -66,27 +66,33 @@ export const Menu = [
         icon: ""
     },
     {
+        name: 'Hash Rate',
+        path: 'https://www.blockchain.com/charts/hash-rate',
+        target: 'blank',
+        icon: "pi-external-link"
+    },
+    {
         name: 'Google Trends',
         path: 'https://trends.google.com.vn/trends/explore?q=Bitcoin',
-        target: '',
+        target: 'blank',
         icon: "pi-external-link"
     },
     {
         name: 'Bitcoin Frees',
         path: 'https://bitcoinfees.earn.com/',
-        target: '',
+        target: 'blank',
         icon: "pi-external-link"
     },
     {
         name: 'Fear And Greed',
         path: 'https://alternative.me/crypto/fear-and-greed-index',
-        target: '',
+        target: 'blank',
         icon: "pi-external-link"
     },
     {
         name: 'Binance Register',
         path: 'https://www.binance.com/vn/markets?ref=37439706',
-        target: '',
+        target: 'blank',
         icon: "pi-external-link"
     }
 ]

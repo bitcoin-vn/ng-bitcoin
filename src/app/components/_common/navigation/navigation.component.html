@@ -16,7 +16,7 @@
       <ul class="ml-3 pb-5">
         <li *ngFor="let row of menu">
           <a class="button" *ngIf="row.target === 'blank'" [target]="row.target" [href]="row.path" [routerLinkActive]="'maket-active'">{{row.name}}
-            <i *ngIf="row.icon" class="pi {{row.icon}}"></i>
+            <i *ngIf="row.icon" class="pi {{row.icon}}" style="font-size: 1em"></i>
           </a>
           <a class="button" *ngIf="row.target !== 'blank'" [routerLink]="row.path" [routerLinkActive]="row.path == '/' ? '' : 'maket-active'">{{row.name}}</a>
         </li>
