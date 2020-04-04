@@ -48,6 +48,12 @@ export const Menu = [
         icon: ""
     },
     {
+        name: 'Convert Fiat Currency',
+        path: '/fiat-to-another',
+        target: '',
+        icon: ""
+    },
+    {
         name: 'Bitcoin QR Code',
         path: '/bitcoin-qrcode',
         target: '',

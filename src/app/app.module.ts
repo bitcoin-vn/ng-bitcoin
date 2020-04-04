@@ -25,6 +25,7 @@ import { SharedModule } from './shared/shared.module';
 import { BitcoinPaperWalletComponent } from './components/bitcoin-paper-wallet/bitcoin-paper-wallet.component';
 import { BitcoinAgeDistributionComponent } from './components/bitcoin-age-distribution/bitcoin-age-distribution.component';
 import { BitcoinQRCodeComponent } from './components/bitcoin-qrcode/bitcoin-qrcode.component';
+import { ConvertFiatCurrencyComponent } from './components/convert-fiat-currency/convert-fiat-currency.component';
 // ngx-bootstrap v4
 import { ModalModule } from 'ngx-bootstrap/modal';
 // angularx-qrcode
@@ -59,6 +60,7 @@ import { NgxCurrencyModule } from "ngx-currency";
     BitcoinPaperWalletComponent,
     BitcoinAgeDistributionComponent,
     BitcoinQRCodeComponent,
+    ConvertFiatCurrencyComponent,
   ],
   imports: [
     BrowserModule,

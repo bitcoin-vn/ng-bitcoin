@@ -16,7 +16,7 @@ import { MyNotesComponent } from "src/app/components/my-notes/my-notes.component
 import { BitcoinAgeDistributionComponent } from "src/app/components/bitcoin-age-distribution/bitcoin-age-distribution.component";
 import { BitcoinPaperWalletComponent } from "src/app/components/bitcoin-paper-wallet/bitcoin-paper-wallet.component";
 import { BitcoinQRCodeComponent } from "src/app/components/bitcoin-qrcode/bitcoin-qrcode.component";
-
+import { ConvertFiatCurrencyComponent } from "src/app/components/convert-fiat-currency/convert-fiat-currency.component";
 
 const routes: Routes = [
   {
@@ -44,6 +44,9 @@ const routes: Routes = [
       }, {
         path: 'btc-to-altcoin',
         component: ConvertBtcToAltcoinComponent
+      }, {
+        path: 'fiat-to-another',
+        component: ConvertFiatCurrencyComponent
       }, {
         path: 'cryptocurrency',
         component: CryptocurrencyComponent
