@@ -72,6 +72,12 @@ export const Menu = [
         icon: ""
     },
     {
+        name: 'Learn About Blockchain',
+        path: '/learn-about-bockchain',
+        target: '',
+        icon: ""
+    },
+    {
         name: 'Hash Rate',
         path: 'https://www.blockchain.com/charts/hash-rate',
         target: 'blank',
@@ -92,6 +98,12 @@ export const Menu = [
     {
         name: 'Fear And Greed',
         path: 'https://alternative.me/crypto/fear-and-greed-index',
+        target: 'blank',
+        icon: "pi-external-link"
+    },
+    {
+        name: 'Bitcoin Halving',
+        path: 'https://www.bitcoinblockhalf.com',
         target: 'blank',
         icon: "pi-external-link"
     },

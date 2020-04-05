@@ -17,6 +17,7 @@ import { BitcoinAgeDistributionComponent } from "src/app/components/bitcoin-age-
 import { BitcoinPaperWalletComponent } from "src/app/components/bitcoin-paper-wallet/bitcoin-paper-wallet.component";
 import { BitcoinQRCodeComponent } from "src/app/components/bitcoin-qrcode/bitcoin-qrcode.component";
 import { ConvertFiatCurrencyComponent } from "src/app/components/convert-fiat-currency/convert-fiat-currency.component";
+import { LearnAboutBlockchainComponent } from "src/app/components/learn-about-blockchain/learn-about-blockchain.component";
 
 const routes: Routes = [
   {
@@ -59,6 +60,9 @@ const routes: Routes = [
       }, {
         path: 'notes',
         component: MyNotesComponent
+      }, {
+        path: 'learn-about-bockchain',
+        component: LearnAboutBlockchainComponent
       }, {
         path: 'bitcoin-age-distribution',
         component: BitcoinAgeDistributionComponent

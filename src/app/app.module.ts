@@ -38,6 +38,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 // ngx-currency
 import { NgxCurrencyModule } from "ngx-currency";
+import { LearnAboutBlockchainComponent } from './components/learn-about-blockchain/learn-about-blockchain.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { NgxCurrencyModule } from "ngx-currency";
     BitcoinAgeDistributionComponent,
     BitcoinQRCodeComponent,
     ConvertFiatCurrencyComponent,
+    LearnAboutBlockchainComponent,
   ],
   imports: [
     BrowserModule,

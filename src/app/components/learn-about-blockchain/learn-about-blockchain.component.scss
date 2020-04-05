@@ -1,0 +1,9 @@
+::ng-deep {
+  iframe {
+    .appLayout {
+      .nav {
+        display: none !important;
+      }
+    }
+  }
+}
