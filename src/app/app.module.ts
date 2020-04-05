@@ -36,6 +36,8 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { ContextMenuModule } from 'primeng/contextmenu';
+import { MenubarModule } from 'primeng/menubar';
 // ngx-currency
 import { NgxCurrencyModule } from "ngx-currency";
 import { LearnAboutBlockchainComponent } from './components/learn-about-blockchain/learn-about-blockchain.component';
@@ -79,6 +81,8 @@ import { LearnAboutBlockchainComponent } from './components/learn-about-blockcha
     ButtonModule,
     DropdownModule,
     ToastModule,
+    MenubarModule,
+    ContextMenuModule,
     // ngx-currency
     NgxCurrencyModule
   ],

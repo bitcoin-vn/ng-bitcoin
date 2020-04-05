@@ -1,9 +1,11 @@
-::ng-deep {
-  iframe {
-    .appLayout {
-      .nav {
-        display: none !important;
-      }
-    }
-  }
+.history-back {
+  position: absolute;
+  bottom: 41px;
+  line-height: 15px;
+}
+
+.history-forward {
+  position: absolute;
+  bottom: 2px;
+  line-height: 15px;
 }
