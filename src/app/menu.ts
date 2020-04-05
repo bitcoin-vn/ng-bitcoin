@@ -54,8 +54,8 @@ export const Menu = [
         icon: ""
     },
     {
-        name: 'Bitcoin QR Code',
-        path: '/bitcoin-qrcode',
+        name: 'QR Code Generator',
+        path: '/qrcode-generator',
         target: '',
         icon: ""
     },
@@ -78,6 +78,18 @@ export const Menu = [
         icon: ""
     },
     {
+        name: 'Bitcoin Halving',
+        path: '/bitcoin-halving',
+        target: '',
+        icon: ""
+    },
+    {
+        name: 'Fear And Greed Index',
+        path: '/fear-and-greed-index',
+        target: '',
+        icon: ""
+    },
+    {
         name: 'Hash Rate',
         path: 'https://www.blockchain.com/charts/hash-rate',
         target: 'blank',
@@ -85,25 +97,13 @@ export const Menu = [
     },
     {
         name: 'Google Trends',
-        path: 'https://trends.google.com.vn/trends/explore?q=Bitcoin',
+        path: 'https://alternative.me/crypto/trends',
         target: 'blank',
         icon: "pi-external-link"
     },
     {
         name: 'Bitcoin Frees',
         path: 'https://bitcoinfees.earn.com/',
-        target: 'blank',
-        icon: "pi-external-link"
-    },
-    {
-        name: 'Fear And Greed',
-        path: 'https://alternative.me/crypto/fear-and-greed-index',
-        target: 'blank',
-        icon: "pi-external-link"
-    },
-    {
-        name: 'Bitcoin Halving',
-        path: 'https://www.bitcoinblockhalf.com',
         target: 'blank',
         icon: "pi-external-link"
     },

@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from "ngx-bootstrap";
-import { Menu } from "../navigation/menu";
+import { Menu } from "src/app/menu";
 
 @Component({
   selector: 'app-navigation',

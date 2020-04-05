@@ -882,3 +882,33 @@ p-multiselect {
     }
   }
 }
+
+.history-back {
+  text-align: center;
+  position: absolute;
+  bottom: 50px;
+  line-height: 15px;
+  background-color: #ff6550;
+  display: block;
+  padding: 13px 0;
+  width: 47px;
+  color: #fff !important;
+  &:hover {
+    width: 3.5pc;
+  }
+}
+
+.history-forward {
+  text-align: center;
+  position: absolute;
+  bottom: 3px;
+  line-height: 15px;
+  background-color: rgb(32, 70, 150);
+  display: block;
+  padding: 13px 0;
+  width: 47px;
+  color: #fff !important;
+  &:hover {
+    width: 3.5pc;
+  }
+}

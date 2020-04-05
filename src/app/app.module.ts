@@ -24,7 +24,6 @@ import { FooterComponent } from './components/_common/footer/footer.component';
 import { SharedModule } from './shared/shared.module';
 import { BitcoinPaperWalletComponent } from './components/bitcoin-paper-wallet/bitcoin-paper-wallet.component';
 import { BitcoinAgeDistributionComponent } from './components/bitcoin-age-distribution/bitcoin-age-distribution.component';
-import { BitcoinQRCodeComponent } from './components/bitcoin-qrcode/bitcoin-qrcode.component';
 import { ConvertFiatCurrencyComponent } from './components/convert-fiat-currency/convert-fiat-currency.component';
 // ngx-bootstrap v4
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -41,6 +40,9 @@ import { MenubarModule } from 'primeng/menubar';
 // ngx-currency
 import { NgxCurrencyModule } from "ngx-currency";
 import { LearnAboutBlockchainComponent } from './components/learn-about-blockchain/learn-about-blockchain.component';
+import { BitcoinHalvingComponent } from './components/bitcoin-halving/bitcoin-halving.component';
+import { FearAndGreedIndexComponent } from './components/fear-and-greed-index/fear-and-greed-index.component';
+import { QRCodeGeneratorComponent } from './components/qrcode-generator/qrcode-generator.component';
 
 @NgModule({
   declarations: [
@@ -62,9 +64,11 @@ import { LearnAboutBlockchainComponent } from './components/learn-about-blockcha
     FooterComponent,
     BitcoinPaperWalletComponent,
     BitcoinAgeDistributionComponent,
-    BitcoinQRCodeComponent,
     ConvertFiatCurrencyComponent,
     LearnAboutBlockchainComponent,
+    BitcoinHalvingComponent,
+    FearAndGreedIndexComponent,
+    QRCodeGeneratorComponent,
   ],
   imports: [
     BrowserModule,

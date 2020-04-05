@@ -15,9 +15,11 @@ import { GoogleTrendsComponent } from "src/app/components/google-trends/google-t
 import { MyNotesComponent } from "src/app/components/my-notes/my-notes.component";
 import { BitcoinAgeDistributionComponent } from "src/app/components/bitcoin-age-distribution/bitcoin-age-distribution.component";
 import { BitcoinPaperWalletComponent } from "src/app/components/bitcoin-paper-wallet/bitcoin-paper-wallet.component";
-import { BitcoinQRCodeComponent } from "src/app/components/bitcoin-qrcode/bitcoin-qrcode.component";
 import { ConvertFiatCurrencyComponent } from "src/app/components/convert-fiat-currency/convert-fiat-currency.component";
 import { LearnAboutBlockchainComponent } from "src/app/components/learn-about-blockchain/learn-about-blockchain.component";
+import { FearAndGreedIndexComponent } from "src/app/components/fear-and-greed-index/fear-and-greed-index.component";
+import { BitcoinHalvingComponent } from "src/app/components/bitcoin-halving/bitcoin-halving.component";
+import { QRCodeGeneratorComponent } from "src/app/components/qrcode-generator/qrcode-generator.component";
 
 const routes: Routes = [
   {
@@ -61,6 +63,12 @@ const routes: Routes = [
         path: 'notes',
         component: MyNotesComponent
       }, {
+        path: 'bitcoin-halving',
+        component: BitcoinHalvingComponent
+      }, {
+        path: 'fear-and-greed-index',
+        component: FearAndGreedIndexComponent
+      }, {
         path: 'learn-about-bockchain',
         component: LearnAboutBlockchainComponent
       }, {
@@ -70,8 +78,8 @@ const routes: Routes = [
         path: 'bitcoin-paper-wallet',
         component: BitcoinPaperWalletComponent
       }, {
-        path: 'bitcoin-qrcode',
-        component: BitcoinQRCodeComponent
+        path: 'qrcode-generator',
+        component: QRCodeGeneratorComponent
       }
     ]
   }, {
