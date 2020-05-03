@@ -90,27 +90,33 @@ export const Menu = [
         icon: ""
     },
     {
-        name: 'Hash Rate',
-        path: 'https://www.blockchain.com/charts/hash-rate',
-        target: 'blank',
+        name: 'Binance Announcements',
+        path: 'https://binance.zendesk.com/hc/vi',
+        target: '_blank',
         icon: "pi-external-link"
     },
     {
-        name: 'Google Trends',
-        path: 'https://alternative.me/crypto/trends',
-        target: 'blank',
+        name: 'Hash Rate',
+        path: 'https://www.blockchain.com/charts/hash-rate',
+        target: '_blank',
+        icon: "pi-external-link"
+    },
+    {
+        name: 'Crypto Trends',
+        path: 'https://alternative.me/crypto/trends/',
+        target: '_blank',
         icon: "pi-external-link"
     },
     {
         name: 'Bitcoin Frees',
         path: 'https://bitcoinfees.earn.com/',
-        target: 'blank',
+        target: '_blank',
         icon: "pi-external-link"
     },
     {
         name: 'Binance Register',
         path: 'https://www.binance.com/vn/markets?ref=37439706',
-        target: 'blank',
+        target: '_blank',
         icon: "pi-external-link"
     }
 ]

@@ -66,6 +66,9 @@ const routes: Routes = [
         path: 'bitcoin-halving',
         component: BitcoinHalvingComponent
       }, {
+        path: 'bitcoin-halving/:name',
+        component: BitcoinHalvingComponent
+      }, {
         path: 'fear-and-greed-index',
         component: FearAndGreedIndexComponent
       }, {
