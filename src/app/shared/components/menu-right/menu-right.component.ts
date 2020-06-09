@@ -60,12 +60,12 @@ export class MenuRightComponent implements OnInit {
   public ticketsTab: any[] = [];
 
   public onShowHide() {
-    this.showHide = !this.showHide
+    this.showHide = !this.showHide;
     this.piSpinner = (this.piSpinner === 'default' ? 'rotated' : 'default');
   }
 
   public onLocale(e) {
-    const locale: Locale = FullLocales.filter((f: Locale) => f.value === e.value)[0];
+    const locale: Locale = this.locales.filter((f: Locale) => f.value === e.value)[0];
     localStorage.setItem('locale_btc_vn', locale.value);
     this.onChangeLocale.emit(locale.value);
   }
@@ -164,9 +164,9 @@ export class MenuRightComponent implements OnInit {
   private initialLocale(): void {
     const localeActive = localStorage.getItem('locale_btc_vn');
     if (localeActive === undefined || localeActive === null) {
-      const locale: Locale = FullLocales.filter((f: Locale) => f.value.split("_")[0] === new Intl.NumberFormat().resolvedOptions().locale)[0];
-      this.selectedLocale = locale.value
-      localStorage.setItem('locale_btc_vn', locale.value);
+      const locale: Locale = this.locales.filter((f: Locale) => f.value.split("_")[0] === new Intl.NumberFormat().resolvedOptions().locale)[0];
+      this.selectedLocale = locale && locale.value;
+      localStorage.setItem('locale_btc_vn', locale && locale.value);
     } else {
       this.selectedLocale = localeActive;
     }
